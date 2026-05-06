@@ -4,7 +4,8 @@ const rappers = [
     name: "Post Malone",
     aliases: ["Austin Post", "Austin Richard Post", "Posty"],
     ageStatus: "30 (Alive)",
-    hometown: "Grapevine, Texas",
+    hometown: "Grapevine",
+    state: "Texas",
     gender: "M",
     signature: "Breakout hit: White Iverson",
     albumOne: "Stoney",
@@ -16,7 +17,8 @@ const rappers = [
     name: "Kendrick Lamar",
     aliases: ["K-Dot", "K Dot"],
     ageStatus: "38 (Alive)",
-    hometown: "Compton, California",
+    hometown: "Compton",
+    state: "California",
     gender: "M",
     signature: "Pulitzer winner",
     albumOne: "good kid, m.A.A.d city",
@@ -28,7 +30,8 @@ const rappers = [
     name: "Nicki Minaj",
     aliases: ["Onika Maraj", "Roman Zolanski"],
     ageStatus: "43 (Alive)",
-    hometown: "Queens, New York",
+    hometown: "Queens",
+    state: "New York",
     gender: "F",
     signature: "Young Money star",
     albumOne: "Pink Friday",
@@ -40,7 +43,8 @@ const rappers = [
     name: "Drake",
     aliases: ["Aubrey Graham", "Champagne Papi"],
     ageStatus: "39 (Alive)",
-    hometown: "Toronto, Ontario",
+    hometown: "Toronto",
+    state: "Ontario",
     gender: "M",
     signature: "Started on Degrassi",
     albumOne: "Take Care",
@@ -52,7 +56,8 @@ const rappers = [
     name: "J. Cole",
     aliases: ["J Cole", "Jermaine Cole"],
     ageStatus: "41 (Alive)",
-    hometown: "Fayetteville, North Carolina",
+    hometown: "Fayetteville",
+    state: "North Carolina",
     gender: "M",
     signature: "Dreamville founder",
     albumOne: "2014 Forest Hills Drive",
@@ -64,7 +69,8 @@ const rappers = [
     name: "Cardi B",
     aliases: ["Belcalis Almanzar"],
     ageStatus: "33 (Alive)",
-    hometown: "Bronx, New York",
+    hometown: "Bronx",
+    state: "New York",
     gender: "F",
     signature: "Breakout hit: Bodak Yellow",
     albumOne: "Invasion of Privacy",
@@ -76,7 +82,8 @@ const rappers = [
     name: "Eminem",
     aliases: ["Slim Shady", "Marshall Mathers"],
     ageStatus: "53 (Alive)",
-    hometown: "Detroit, Michigan",
+    hometown: "Detroit",
+    state: "Michigan",
     gender: "M",
     signature: "Alter ego: Slim Shady",
     albumOne: "The Marshall Mathers LP",
@@ -88,7 +95,8 @@ const rappers = [
     name: "Jay-Z",
     aliases: ["Jay Z", "Shawn Carter", "Hov"],
     ageStatus: "56 (Alive)",
-    hometown: "Brooklyn, New York",
+    hometown: "Brooklyn",
+    state: "New York",
     gender: "M",
     signature: "Roc-A-Fella co-founder",
     albumOne: "Reasonable Doubt",
@@ -100,7 +108,8 @@ const rappers = [
     name: "Nas",
     aliases: ["Nasir Jones", "Nasty Nas"],
     ageStatus: "52 (Alive)",
-    hometown: "Queens, New York",
+    hometown: "Queens",
+    state: "New York",
     gender: "M",
     signature: "Illmatic at 20",
     albumOne: "Illmatic",
@@ -112,7 +121,8 @@ const rappers = [
     name: "Tupac Shakur",
     aliases: ["2Pac", "Makaveli", "Pac"],
     ageStatus: "25 (Deceased)",
-    hometown: "East Harlem, New York",
+    hometown: "East Harlem",
+    state: "New York",
     gender: "M",
     signature: "Death Row era icon",
     albumOne: "All Eyez on Me",
@@ -124,7 +134,8 @@ const rappers = [
     name: "The Notorious B.I.G.",
     aliases: ["Biggie Smalls", "Biggie", "Christopher Wallace"],
     ageStatus: "24 (Deceased)",
-    hometown: "Brooklyn, New York",
+    hometown: "Brooklyn",
+    state: "New York",
     gender: "M",
     signature: "Junior M.A.F.I.A. mentor",
     albumOne: "Ready to Die",
@@ -136,7 +147,8 @@ const rappers = [
     name: "Missy Elliott",
     aliases: ["Misdemeanor", "Melissa Elliott"],
     ageStatus: "54 (Alive)",
-    hometown: "Portsmouth, Virginia",
+    hometown: "Portsmouth",
+    state: "Virginia",
     gender: "F",
     signature: "Innovative video director",
     albumOne: "Supa Dupa Fly",
@@ -148,7 +160,8 @@ const rappers = [
     name: "Lil Wayne",
     aliases: ["Weezy", "Dwayne Carter"],
     ageStatus: "43 (Alive)",
-    hometown: "New Orleans, Louisiana",
+    hometown: "New Orleans",
+    state: "Louisiana",
     gender: "M",
     signature: "Young Money founder",
     albumOne: "Tha Carter III",
@@ -160,7 +173,8 @@ const rappers = [
     name: "Lauryn Hill",
     aliases: ["Ms. Lauryn Hill", "L. Boogie"],
     ageStatus: "50 (Alive)",
-    hometown: "South Orange, New Jersey",
+    hometown: "South Orange",
+    state: "New Jersey",
     gender: "F",
     signature: "Fugees standout",
     albumOne: "The Miseducation of Lauryn Hill",
@@ -172,7 +186,8 @@ const rappers = [
     name: "Snoop Dogg",
     aliases: ["Snoop Doggy Dogg", "Calvin Broadus"],
     ageStatus: "54 (Alive)",
-    hometown: "Long Beach, California",
+    hometown: "Long Beach",
+    state: "California",
     gender: "M",
     signature: "G-funk drawl",
     albumOne: "Doggystyle",
@@ -184,7 +199,8 @@ const rappers = [
     name: "Tyler, the Creator",
     aliases: ["Tyler Okonma", "Wolf Haley"],
     ageStatus: "35 (Alive)",
-    hometown: "Hawthorne, California",
+    hometown: "Hawthorne",
+    state: "California",
     gender: "M",
     signature: "Odd Future founder",
     albumOne: "Flower Boy",
@@ -195,9 +211,10 @@ const rappers = [
 
 const answer = rappers.find((rapper) => rapper.id === "post-malone");
 const maxClues = 7;
+const includeStateWithHometown = false;
 const clueFields = [
   ["Age / Status", "ageStatus"],
-  ["Hometown / State", "hometown"],
+  ["Hometown", "hometown"],
   ["M / F", "gender"],
   ["Album", "albumOne"],
   ["Album", "albumTwo"],
@@ -252,6 +269,22 @@ function searchRappers(value) {
     .slice(0, 8);
 }
 
+function formatHometown(rapper) {
+  if (includeStateWithHometown && rapper.state) {
+    return `${rapper.hometown}, ${rapper.state}`;
+  }
+
+  return rapper.hometown;
+}
+
+function getClueValue(rapper, key) {
+  if (key === "hometown") {
+    return formatHometown(rapper);
+  }
+
+  return rapper[key];
+}
+
 function renderClues() {
   clueGrid.innerHTML = "";
   clueCount.textContent = `${revealedClues}/${maxClues}`;
@@ -272,7 +305,7 @@ function renderClues() {
 
     const value = document.createElement("p");
     value.className = "clue-value";
-    value.textContent = isRevealed ? answer[key] : "Locked";
+    value.textContent = isRevealed ? getClueValue(answer, key) : "Locked";
 
     card.append(labelRow, value);
     clueGrid.append(card);
@@ -297,7 +330,7 @@ function renderSuggestions(matches) {
     option.textContent = rapper.name;
 
     const meta = document.createElement("span");
-    meta.textContent = rapper.hometown;
+    meta.textContent = formatHometown(rapper);
     option.append(meta);
 
     option.addEventListener("click", () => {
