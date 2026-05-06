@@ -329,9 +329,9 @@ function renderSuggestions(matches) {
     option.setAttribute("role", "option");
     option.textContent = rapper.name;
 
-    const meta = document.createElement("span");
-    meta.textContent = formatHometown(rapper);
-    option.append(meta);
+    // const meta = document.createElement("span");
+    // meta.textContent = formatHometown(rapper);
+    // option.append(meta);
 
     option.addEventListener("click", () => {
       input.value = rapper.name;
