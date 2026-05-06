@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapperle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <section class="stage" aria-labelledby="game-title">
+        <div class="brand-row">
+          <div>
+            <p class="eyebrow">daily hip-hop deduction</p>
+            <h1 id="game-title">Rapperle</h1>
+          </div>
+          <div class="score-card" aria-live="polite">
+            <span class="score-label">clues</span>
+            <strong id="clue-count">1/6</strong>
+          </div>
+        </div>
+
+        <div class="turntable" aria-hidden="true">
+          <div class="record">
+            <div class="record-ring"></div>
+            <div class="record-label">R</div>
+          </div>
+          <div class="meter">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div class="clue-grid" id="clue-grid" aria-label="Rapper clues"></div>
+
+        <form class="guess-form" id="guess-form" autocomplete="off">
+          <label for="guess-input">Guess the rapper</label>
+          <div class="input-wrap">
+            <input
+              id="guess-input"
+              name="guess"
+              type="text"
+              placeholder="Start typing a rapper..."
+              aria-controls="suggestions"
+              aria-expanded="false"
+            />
+            <button type="submit">Guess</button>
+          </div>
+          <div class="suggestions" id="suggestions" role="listbox"></div>
+        </form>
+
+        <div class="feedback" id="feedback" role="status" aria-live="polite">
+          Make a guess to unlock the next clue.
+        </div>
+
+        <div class="guess-history" id="guess-history" aria-label="Guess history"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

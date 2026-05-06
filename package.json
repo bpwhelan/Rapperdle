@@ -1,0 +1,18 @@
+{
+  "name": "rapperle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A static dark-mode rapper guessing game.",
+  "scripts": {
+    "build": "node --check app.js",
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": [
+    "rapperle",
+    "game",
+    "vercel",
+    "static"
+  ],
+  "license": "UNLICENSED"
+}
