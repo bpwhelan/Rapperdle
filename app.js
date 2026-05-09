@@ -1,225 +1,21 @@
-const rappers = [
-  {
-    id: "post-malone",
-    name: "Post Malone",
-    aliases: ["Austin Post", "Austin Richard Post", "Posty"],
-    ageStatus: "30 (Alive)",
-    hometown: "Grapevine",
-    state: "Texas",
-    gender: "M",
-    signature: "Breakout hit: White Iverson",
-    albumOne: "Stoney",
-    albumTwo: "Beerbongs & Bentleys",
-    firstLetter: "P",
-  },
-  {
-    id: "kendrick-lamar",
-    name: "Kendrick Lamar",
-    aliases: ["K-Dot", "K Dot"],
-    ageStatus: "38 (Alive)",
-    hometown: "Compton",
-    state: "California",
-    gender: "M",
-    signature: "Pulitzer winner",
-    albumOne: "good kid, m.A.A.d city",
-    albumTwo: "DAMN.",
-    firstLetter: "K",
-  },
-  {
-    id: "nicki-minaj",
-    name: "Nicki Minaj",
-    aliases: ["Onika Maraj", "Roman Zolanski"],
-    ageStatus: "43 (Alive)",
-    hometown: "Queens",
-    state: "New York",
-    gender: "F",
-    signature: "Young Money star",
-    albumOne: "Pink Friday",
-    albumTwo: "The Pinkprint",
-    firstLetter: "N",
-  },
-  {
-    id: "drake",
-    name: "Drake",
-    aliases: ["Aubrey Graham", "Champagne Papi"],
-    ageStatus: "39 (Alive)",
-    hometown: "Toronto",
-    state: "Ontario",
-    gender: "M",
-    signature: "Started on Degrassi",
-    albumOne: "Take Care",
-    albumTwo: "Views",
-    firstLetter: "D",
-  },
-  {
-    id: "j-cole",
-    name: "J. Cole",
-    aliases: ["J Cole", "Jermaine Cole"],
-    ageStatus: "41 (Alive)",
-    hometown: "Fayetteville",
-    state: "North Carolina",
-    gender: "M",
-    signature: "Dreamville founder",
-    albumOne: "2014 Forest Hills Drive",
-    albumTwo: "KOD",
-    firstLetter: "J",
-  },
-  {
-    id: "cardi-b",
-    name: "Cardi B",
-    aliases: ["Belcalis Almanzar"],
-    ageStatus: "33 (Alive)",
-    hometown: "Bronx",
-    state: "New York",
-    gender: "F",
-    signature: "Breakout hit: Bodak Yellow",
-    albumOne: "Invasion of Privacy",
-    albumTwo: "Gangsta Bitch Music, Vol. 2",
-    firstLetter: "C",
-  },
-  {
-    id: "eminem",
-    name: "Eminem",
-    aliases: ["Slim Shady", "Marshall Mathers"],
-    ageStatus: "53 (Alive)",
-    hometown: "Detroit",
-    state: "Michigan",
-    gender: "M",
-    signature: "Alter ego: Slim Shady",
-    albumOne: "The Marshall Mathers LP",
-    albumTwo: "The Eminem Show",
-    firstLetter: "E",
-  },
-  {
-    id: "jay-z",
-    name: "Jay-Z",
-    aliases: ["Jay Z", "Shawn Carter", "Hov"],
-    ageStatus: "56 (Alive)",
-    hometown: "Brooklyn",
-    state: "New York",
-    gender: "M",
-    signature: "Roc-A-Fella co-founder",
-    albumOne: "Reasonable Doubt",
-    albumTwo: "The Blueprint",
-    firstLetter: "J",
-  },
-  {
-    id: "nas",
-    name: "Nas",
-    aliases: ["Nasir Jones", "Nasty Nas"],
-    ageStatus: "52 (Alive)",
-    hometown: "Queens",
-    state: "New York",
-    gender: "M",
-    signature: "Illmatic at 20",
-    albumOne: "Illmatic",
-    albumTwo: "Stillmatic",
-    firstLetter: "N",
-  },
-  {
-    id: "tupac",
-    name: "Tupac Shakur",
-    aliases: ["2Pac", "Makaveli", "Pac"],
-    ageStatus: "25 (Deceased)",
-    hometown: "East Harlem",
-    state: "New York",
-    gender: "M",
-    signature: "Death Row era icon",
-    albumOne: "All Eyez on Me",
-    albumTwo: "Me Against the World",
-    firstLetter: "T",
-  },
-  {
-    id: "biggie",
-    name: "The Notorious B.I.G.",
-    aliases: ["Biggie Smalls", "Biggie", "Christopher Wallace"],
-    ageStatus: "24 (Deceased)",
-    hometown: "Brooklyn",
-    state: "New York",
-    gender: "M",
-    signature: "Junior M.A.F.I.A. mentor",
-    albumOne: "Ready to Die",
-    albumTwo: "Life After Death",
-    firstLetter: "T",
-  },
-  {
-    id: "missy-elliott",
-    name: "Missy Elliott",
-    aliases: ["Misdemeanor", "Melissa Elliott"],
-    ageStatus: "54 (Alive)",
-    hometown: "Portsmouth",
-    state: "Virginia",
-    gender: "F",
-    signature: "Innovative video director",
-    albumOne: "Supa Dupa Fly",
-    albumTwo: "Miss E... So Addictive",
-    firstLetter: "M",
-  },
-  {
-    id: "lil-wayne",
-    name: "Lil Wayne",
-    aliases: ["Weezy", "Dwayne Carter"],
-    ageStatus: "43 (Alive)",
-    hometown: "New Orleans",
-    state: "Louisiana",
-    gender: "M",
-    signature: "Young Money founder",
-    albumOne: "Tha Carter III",
-    albumTwo: "Tha Carter IV",
-    firstLetter: "L",
-  },
-  {
-    id: "lauryn-hill",
-    name: "Lauryn Hill",
-    aliases: ["Ms. Lauryn Hill", "L. Boogie"],
-    ageStatus: "50 (Alive)",
-    hometown: "South Orange",
-    state: "New Jersey",
-    gender: "F",
-    signature: "Fugees standout",
-    albumOne: "The Miseducation of Lauryn Hill",
-    albumTwo: "MTV Unplugged No. 2.0",
-    firstLetter: "L",
-  },
-  {
-    id: "snoop-dogg",
-    name: "Snoop Dogg",
-    aliases: ["Snoop Doggy Dogg", "Calvin Broadus"],
-    ageStatus: "54 (Alive)",
-    hometown: "Long Beach",
-    state: "California",
-    gender: "M",
-    signature: "G-funk drawl",
-    albumOne: "Doggystyle",
-    albumTwo: "Tha Doggfather",
-    firstLetter: "S",
-  },
-  {
-    id: "tyler-the-creator",
-    name: "Tyler, the Creator",
-    aliases: ["Tyler Okonma", "Wolf Haley"],
-    ageStatus: "35 (Alive)",
-    hometown: "Hawthorne",
-    state: "California",
-    gender: "M",
-    signature: "Odd Future founder",
-    albumOne: "Flower Boy",
-    albumTwo: "IGOR",
-    firstLetter: "T",
-  },
-];
+let rappers = [];
+let answer = null;
+let clueFields = [];
+let maxClues = 0;
 
-const answer = rappers.find((rapper) => rapper.id === "post-malone");
-const maxClues = 7;
+const dataUrl = "rappers.json";
+const millisecondsPerDay = 24 * 60 * 60 * 1000;
+const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 1) / millisecondsPerDay);
 const includeStateWithHometown = false;
-const clueFields = [
-  ["Age / Status", "ageStatus"],
+const baseClueFields = [
+  ["Age / Status", "ageStatus", true],
   ["Hometown", "hometown"],
-  ["M / F", "gender"],
+  ["Country", "country"],
+  ["Gender", "gender"],
   ["Album", "albumOne"],
   ["Album", "albumTwo"],
   ["First Letter", "firstLetter"],
-  ["Signature Clue", "signature"],
+  ["Signature Clue", "signature", false],
 ];
 
 let revealedClues = 1;
@@ -244,7 +40,7 @@ function normalize(value) {
 }
 
 function getSearchNames(rapper) {
-  return [rapper.name, ...rapper.aliases];
+  return [rapper.name, ...(rapper.aliases || [])];
 }
 
 function findRapper(value) {
@@ -278,6 +74,10 @@ function formatHometown(rapper) {
 }
 
 function getClueValue(rapper, key) {
+  if (key === "ageStatus") {
+    return getAgeStatus(rapper);
+  }
+
   if (key === "hometown") {
     return formatHometown(rapper);
   }
@@ -285,7 +85,81 @@ function getClueValue(rapper, key) {
   return rapper[key];
 }
 
+function getAgeStatus(rapper) {
+  if (!rapper.birthDate) {
+    return rapper.ageStatus;
+  }
+
+  const endDate = rapper.deathDate ? new Date(`${rapper.deathDate}T00:00:00Z`) : new Date();
+  const birthDate = new Date(`${rapper.birthDate}T00:00:00Z`);
+  let age = endDate.getUTCFullYear() - birthDate.getUTCFullYear();
+  const monthDelta = endDate.getUTCMonth() - birthDate.getUTCMonth();
+
+  if (monthDelta < 0 || (monthDelta === 0 && endDate.getUTCDate() < birthDate.getUTCDate())) {
+    age -= 1;
+  }
+
+  return `${age} (${rapper.deathDate ? "Deceased" : "Alive"})`;
+}
+
+function getAvailableClueFields(rapper) {
+  return baseClueFields.filter(([, key, required = true]) => required || Boolean(rapper[key]));
+}
+
+function getUtcPuzzleDay(date = new Date()) {
+  return Math.floor(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) / millisecondsPerDay);
+}
+
+function hashSeed(value) {
+  let hash = 2166136261;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
+
+function greatestCommonDivisor(left, right) {
+  let a = Math.abs(left);
+  let b = Math.abs(right);
+
+  while (b) {
+    const next = a % b;
+    a = b;
+    b = next;
+  }
+
+  return a;
+}
+
+function getCoprimeStep(seed, size) {
+  let step = (hashSeed(seed) % size) || 1;
+
+  while (greatestCommonDivisor(step, size) !== 1) {
+    step = (step + 1) % size || 1;
+  }
+
+  return step;
+}
+
+function selectDailyRapper(roster, date = new Date()) {
+  const size = roster.length;
+  const dayOffset = Math.max(0, getUtcPuzzleDay(date) - firstPuzzleDay);
+  const cycle = Math.floor(dayOffset / size);
+  const position = dayOffset % size;
+  const offset = hashSeed(`rapperdle-offset-${cycle}-${size}`) % size;
+  const step = getCoprimeStep(`rapperdle-step-${cycle}-${size}`, size);
+
+  return roster[(offset + position * step) % size];
+}
+
 function renderClues() {
+  if (!answer) {
+    return;
+  }
+
   clueGrid.innerHTML = "";
   clueCount.textContent = `${revealedClues}/${maxClues}`;
 
@@ -490,4 +364,41 @@ form.addEventListener("submit", (event) => {
   submitGuess(input.value);
 });
 
-renderClues();
+async function loadRappers() {
+  const response = await fetch(dataUrl);
+
+  if (!response.ok) {
+    throw new Error(`Unable to load ${dataUrl}`);
+  }
+
+  const data = await response.json();
+  const roster = Array.isArray(data) ? data : data.rappers;
+
+  if (!Array.isArray(roster) || !roster.length) {
+    throw new Error(`${dataUrl} did not contain any rappers`);
+  }
+
+  return roster;
+}
+
+async function init() {
+  input.disabled = true;
+  form.querySelector("button").disabled = true;
+  setFeedback("Loading rapper roster...");
+
+  try {
+    rappers = await loadRappers();
+    answer = selectDailyRapper(rappers);
+    clueFields = getAvailableClueFields(answer);
+    maxClues = clueFields.length;
+    input.disabled = false;
+    form.querySelector("button").disabled = false;
+    resetGame();
+  } catch (error) {
+    console.error(error);
+    clueCount.textContent = "0/0";
+    setFeedback("Could not load the rapper roster. Run the app through a local server and try again.", "lose");
+  }
+}
+
+init();

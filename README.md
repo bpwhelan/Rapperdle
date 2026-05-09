@@ -4,7 +4,7 @@ A small static rapper guessing game built with plain HTML, CSS, and JavaScript.
 
 ## Run Locally
 
-Open `index.html` directly in a browser, or run:
+Run the static server so the browser can load `rappers.json`:
 
 ```bash
 npm run dev

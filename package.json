@@ -4,7 +4,7 @@
   "private": true,
   "description": "A static dark-mode rapper guessing game.",
   "scripts": {
-    "build": "node --check app.js",
+    "build": "node --check app.js && node --check scripts/build-rapper-data.mjs && node -e \"JSON.parse(require('fs').readFileSync('rappers.json','utf8'))\"",
     "dev": "npx serve .",
     "start": "npx serve ."
   },
