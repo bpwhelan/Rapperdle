@@ -5,6 +5,8 @@ let maxClues = 0;
 
 const dataUrl = "rappers.json";
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
+const easternStandardOffsetHours = 5;
+const easternStandardOffsetMilliseconds = easternStandardOffsetHours * 60 * 60 * 1000;
 const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 1) / millisecondsPerDay);
 const includeStateWithHometown = false;
 const baseClueFields = [
@@ -22,6 +24,7 @@ let revealedClues = 1;
 let guesses = [];
 let gameOver = false;
 let activeSuggestion = -1;
+let dailyResetTimer = null;
 
 const clueGrid = document.querySelector("#clue-grid");
 const clueCount = document.querySelector("#clue-count");
@@ -106,8 +109,29 @@ function getAvailableClueFields(rapper) {
   return baseClueFields.filter(([, key, required = true]) => required || Boolean(rapper[key]));
 }
 
-function getUtcPuzzleDay(date = new Date()) {
-  return Math.floor(Date.UTC(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate()) / millisecondsPerDay);
+function getEasternStandardDate(date = new Date()) {
+  return new Date(date.getTime() - easternStandardOffsetMilliseconds);
+}
+
+function getEasternStandardPuzzleDay(date = new Date()) {
+  const estDate = getEasternStandardDate(date);
+
+  return Math.floor(Date.UTC(estDate.getUTCFullYear(), estDate.getUTCMonth(), estDate.getUTCDate()) / millisecondsPerDay);
+}
+
+function getNextEasternStandardResetDelay(date = new Date()) {
+  const estDate = getEasternStandardDate(date);
+  const nextResetTime = Date.UTC(
+    estDate.getUTCFullYear(),
+    estDate.getUTCMonth(),
+    estDate.getUTCDate() + 1,
+    easternStandardOffsetHours,
+    0,
+    0,
+    0
+  );
+
+  return Math.max(0, nextResetTime - date.getTime());
 }
 
 function hashSeed(value) {
@@ -146,13 +170,31 @@ function getCoprimeStep(seed, size) {
 
 function selectDailyRapper(roster, date = new Date()) {
   const size = roster.length;
-  const dayOffset = Math.max(0, getUtcPuzzleDay(date) - firstPuzzleDay);
+  const dayOffset = Math.max(0, getEasternStandardPuzzleDay(date) - firstPuzzleDay);
   const cycle = Math.floor(dayOffset / size);
   const position = dayOffset % size;
   const offset = hashSeed(`rapperdle-offset-${cycle}-${size}`) % size;
   const step = getCoprimeStep(`rapperdle-step-${cycle}-${size}`, size);
 
   return roster[(offset + position * step) % size];
+}
+
+function setDailyRapper(date = new Date()) {
+  answer = selectDailyRapper(rappers, date);
+  clueFields = getAvailableClueFields(answer);
+  maxClues = clueFields.length;
+}
+
+function scheduleDailyReset() {
+  if (dailyResetTimer) {
+    clearTimeout(dailyResetTimer);
+  }
+
+  dailyResetTimer = setTimeout(() => {
+    setDailyRapper();
+    resetGame();
+    scheduleDailyReset();
+  }, getNextEasternStandardResetDelay() + 1000);
 }
 
 function renderClues() {
@@ -388,12 +430,11 @@ async function init() {
 
   try {
     rappers = await loadRappers();
-    answer = selectDailyRapper(rappers);
-    clueFields = getAvailableClueFields(answer);
-    maxClues = clueFields.length;
+    setDailyRapper();
     input.disabled = false;
     form.querySelector("button").disabled = false;
     resetGame();
+    scheduleDailyReset();
   } catch (error) {
     console.error(error);
     clueCount.textContent = "0/0";
