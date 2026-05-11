@@ -7,7 +7,7 @@ const dataUrl = "rappers.json";
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const easternStandardOffsetHours = 5;
 const easternStandardOffsetMilliseconds = easternStandardOffsetHours * 60 * 60 * 1000;
-const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 2) / millisecondsPerDay);
+const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 3) / millisecondsPerDay);
 const includeStateWithHometown = false;
 const baseClueFields = [
   ["Age / Status", "ageStatus", true],
