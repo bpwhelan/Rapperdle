@@ -10,10 +10,8 @@ const easternStandardOffsetMilliseconds = easternStandardOffsetHours * 60 * 60 *
 const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 1) / millisecondsPerDay);
 const includeStateWithHometown = false;
 const baseClueFields = [
-  ["Age / Status", "ageStatus", true],
+  ["Age / Status / Gender", "ageStatus", true],
   ["Hometown", "hometown"],
-  ["Country", "country"],
-  ["Gender", "gender"],
   ["Album", "albumOne"],
   ["Album", "albumTwo"],
   ["First Letter", "firstLetter"],
@@ -33,6 +31,7 @@ const input = document.querySelector("#guess-input");
 const suggestions = document.querySelector("#suggestions");
 const feedback = document.querySelector("#feedback");
 const history = document.querySelector("#guess-history");
+const giveUpBtn = document.querySelector("#give-up-btn");
 
 function normalize(value) {
   return value
@@ -78,7 +77,8 @@ function formatHometown(rapper) {
 
 function getClueValue(rapper, key) {
   if (key === "ageStatus") {
-    return getAgeStatus(rapper);
+    const ageStatus = getAgeStatus(rapper);
+    return rapper.gender ? `${ageStatus} · ${rapper.gender}` : ageStatus;
   }
 
   if (key === "hometown") {
@@ -286,6 +286,7 @@ function setFeedback(message, type = "") {
 
 function endGame(won) {
   gameOver = true;
+  giveUpBtn.hidden = true;
   closeSuggestions();
   input.disabled = true;
   form.querySelector("button").disabled = true;
@@ -309,6 +310,7 @@ function resetGame() {
   revealedClues = 1;
   guesses = [];
   gameOver = false;
+  giveUpBtn.hidden = true;
   input.disabled = false;
   form.querySelector("button").disabled = false;
   input.value = "";
@@ -353,8 +355,9 @@ function submitGuess(value) {
   revealedClues = Math.min(maxClues, revealedClues + 1);
   renderClues();
 
-  if (revealedClues === maxClues && guesses.length >= maxClues) {
-    endGame(false);
+  if (revealedClues === maxClues) {
+    giveUpBtn.hidden = false;
+    setFeedback("Nope. All clues revealed — keep guessing or give up.");
     return;
   }
 
@@ -404,6 +407,10 @@ document.addEventListener("click", (event) => {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   submitGuess(input.value);
+});
+
+giveUpBtn.addEventListener("click", () => {
+  endGame(false);
 });
 
 async function loadRappers() {

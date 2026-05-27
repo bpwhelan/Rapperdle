@@ -288,6 +288,29 @@ h1 {
   filter: brightness(1.06);
 }
 
+.give-up {
+  display: block;
+  margin: 12px auto 0;
+  min-height: 44px;
+  padding: 0 20px;
+  border: 2px solid var(--line);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  font-weight: 700;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.give-up:hover {
+  border-color: #e05c5c;
+  color: #e05c5c;
+}
+
+.give-up[hidden] {
+  display: none;
+}
+
 .suggestions {
   position: absolute;
   z-index: 5;
