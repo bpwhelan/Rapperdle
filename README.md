@@ -10,6 +10,10 @@ Run the static server so the browser can load `rappers.json`:
 npm run dev
 ```
 
+## Admin Dashboard
+
+Open [`/admin.html`](admin.html) for the unauthed, read-only roster dashboard. It includes roster health checks, searchable active/disabled records, and the next 14 deterministic daily answers.
+
 ## Deploy To Vercel
 
 1. Push this folder to a GitHub repository.

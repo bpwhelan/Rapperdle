@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rapperdle Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="admin.css" />
+  </head>
+  <body class="admin-page">
+    <main class="admin-shell">
+      <header class="admin-header">
+        <div>
+          <p class="eyebrow">roster control room</p>
+          <h1>Rapperdle admin</h1>
+          <p class="admin-intro">
+            A read-only view of the playable roster, disabled records, data health, and the next daily answers.
+          </p>
+        </div>
+        <nav class="admin-nav" aria-label="Admin navigation">
+          <a class="admin-link" href="index.html">← Back to game</a>
+          <span class="admin-pill">Unauthed · read-only</span>
+        </nav>
+      </header>
+
+      <section class="admin-error" id="admin-error" role="alert" hidden>
+        <strong>Roster unavailable.</strong>
+        <span id="admin-error-message">Could not load rappers.json.</span>
+      </section>
+
+      <section class="stat-grid" aria-label="Roster summary">
+        <article class="stat-card stat-card-accent">
+          <span class="stat-label">Playable roster</span>
+          <strong id="active-count">—</strong>
+          <small>Active daily answers</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Disabled records</span>
+          <strong id="disabled-count">—</strong>
+          <small>Preserved in the JSON</small>
+        </article>
+        <article class="stat-card">
+          <span class="stat-label">Total records</span>
+          <strong id="total-count">—</strong>
+          <small>Before status filtering</small>
+        </article>
+        <article class="stat-card stat-card-warm">
+          <span class="stat-label">Countries</span>
+          <strong id="country-count">—</strong>
+          <small>Represented by active artists</small>
+        </article>
+      </section>
+
+      <div class="admin-columns">
+        <section class="admin-panel schedule-panel" aria-labelledby="schedule-title">
+          <header class="panel-header">
+            <div>
+              <p class="panel-kicker">Daily control</p>
+              <h2 id="schedule-title">Upcoming answers</h2>
+              <p class="panel-description">The deterministic answer order for the next two weeks.</p>
+            </div>
+            <span class="panel-tag">Next 14 days</span>
+          </header>
+          <div class="table-wrap">
+            <table class="admin-table schedule-table">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Answer</th>
+                  <th scope="col">Hometown</th>
+                  <th scope="col">Clues</th>
+                </tr>
+              </thead>
+              <tbody id="upcoming-body"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="admin-panel health-panel" aria-labelledby="health-title">
+          <header class="panel-header">
+            <div>
+              <p class="panel-kicker">Data QA</p>
+              <h2 id="health-title">Roster health</h2>
+              <p class="panel-description">Quick checks before you share the next puzzle.</p>
+            </div>
+          </header>
+          <div class="health-list" id="health-list"></div>
+          <dl class="metadata-list">
+            <div>
+              <dt>Generated</dt>
+              <dd id="generated-at">—</dd>
+            </div>
+            <div>
+              <dt>Source note</dt>
+              <dd id="source-summary">—</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+
+      <section class="admin-panel roster-panel" aria-labelledby="roster-title">
+        <header class="panel-header roster-header">
+          <div>
+            <p class="panel-kicker">Roster explorer</p>
+            <h2 id="roster-title">All rappers</h2>
+            <p class="panel-description" id="roster-count">Loading roster…</p>
+          </div>
+          <div class="roster-tools">
+            <label class="search-control" for="roster-search">
+              <span>Search</span>
+              <input id="roster-search" type="search" placeholder="Name, city, album, alias…" autocomplete="off" />
+            </label>
+            <label class="select-control" for="status-filter">
+              <span>Status</span>
+              <select id="status-filter">
+                <option value="all">All records</option>
+                <option value="active">Playable only</option>
+                <option value="disabled">Disabled only</option>
+              </select>
+            </label>
+            <button class="quiet-button" id="clear-roster-filters" type="button">Reset</button>
+          </div>
+        </header>
+        <div class="table-wrap roster-table-wrap">
+          <table class="admin-table roster-table">
+            <thead>
+              <tr>
+                <th scope="col">Status</th>
+                <th scope="col">Rapper</th>
+                <th scope="col">Hometown</th>
+                <th scope="col">Country</th>
+                <th scope="col">Albums</th>
+                <th scope="col">Aliases</th>
+              </tr>
+            </thead>
+            <tbody id="roster-body"></tbody>
+          </table>
+        </div>
+        <p class="empty-state" id="roster-empty" hidden>No records match those filters.</p>
+      </section>
+
+      <footer class="admin-footer">
+        <span>Static dashboard · no write controls</span>
+        <a href="index.html">Return to Rapperdle</a>
+      </footer>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
