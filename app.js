@@ -422,12 +422,21 @@ async function loadRappers() {
 
   const data = await response.json();
   const roster = Array.isArray(data) ? data : data.rappers;
+  const disabledIds = new Set(Array.isArray(data) ? [] : data.disabledRapperIds || []);
 
   if (!Array.isArray(roster) || !roster.length) {
     throw new Error(`${dataUrl} did not contain any rappers`);
   }
 
-  return roster;
+  const enabledRoster = roster.filter(
+    (rapper) => rapper.enabled !== false && !disabledIds.has(rapper.id)
+  );
+
+  if (!enabledRoster.length) {
+    throw new Error(`${dataUrl} did not contain any enabled rappers`);
+  }
+
+  return enabledRoster;
 }
 
 async function init() {

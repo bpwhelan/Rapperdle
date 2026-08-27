@@ -1,6 +1,108 @@
 {
   "generatedAt": "2026-05-09T03:12:49.764Z",
-  "sourceSummary": "Roster generated from MusicBrainz artist search records and MusicBrainz release-group album records. Entries are MusicBrainz Person artists from the US or UK with rap-related tags/disambiguation, known birth date, birthplace, gender, and at least two album release groups.",
+  "sourceSummary": "Roster generated from MusicBrainz artist search records and MusicBrainz release-group album records, with manually curated entries and disabled IDs preserved across refreshes.",
+  "disabledRapperIds": [
+    "not",
+    "12-gauge",
+    "alesha-dixon",
+    "apathy",
+    "awake",
+    "aybe",
+    "b-dolan",
+    "baby-d",
+    "baseman",
+    "bobby-raps",
+    "brennan-savage",
+    "bronze-nazareth",
+    "brooke-candy",
+    "burnzy",
+    "cage",
+    "calboy",
+    "chuuwee",
+    "cities-aviv",
+    "chris-webby",
+    "count-bass-d",
+    "da-t-r-u-t-h",
+    "daforce",
+    "dame-grease",
+    "dan-bull",
+    "dax",
+    "dj-shadow",
+    "doseone",
+    "dumbfoundead",
+    "ed-sheeran",
+    "eligh",
+    "estelle",
+    "father",
+    "flying-lotus",
+    "frisco",
+    "funky-dl",
+    "hi-rez",
+    "hit-boy",
+    "hush",
+    "hussein-fatal",
+    "iamddb",
+    "j-dilla",
+    "j-pimp",
+    "j-live",
+    "j-zone",
+    "jace",
+    "jake-miller",
+    "jammer",
+    "jeremiah-jae",
+    "killa-p",
+    "killstation",
+    "king-louie",
+    "knoc-turn-al",
+    "la-the-darkman",
+    "lala-andce",
+    "lewis-parker",
+    "lil-gnar",
+    "lil-zay-osama",
+    "loucifer",
+    "luke",
+    "meyhem-lauren",
+    "mc-chris",
+    "mc-lars",
+    "mr-envi",
+    "navy-blue",
+    "nottz",
+    "oliver-francis",
+    "omar-offendum",
+    "outasight",
+    "peeinmysock",
+    "pete-rock",
+    "plutohb",
+    "random",
+    "rasco",
+    "r-i-e",
+    "roscoe-dash",
+    "scorcher",
+    "sean-slick",
+    "sha-ek",
+    "smooth",
+    "sole",
+    "soni",
+    "sonita-alizadeh",
+    "starlito",
+    "substantial",
+    "sway-dasafo",
+    "tadoe",
+    "taylor-bennett",
+    "the-human-animal",
+    "the-jacka",
+    "tobymac",
+    "turk",
+    "wax",
+    "wicca-phase-springs-eternal",
+    "wifisfuneral",
+    "x-raided",
+    "xaviersobased",
+    "young-noble",
+    "your-old-droog",
+    "yuke",
+    "makaveli"
+  ],
   "rappers": [
     {
       "id": "not",
@@ -6049,7 +6151,6 @@
         "Russell T. Jones",
         "O.D.B.",
         "Dirt McGirt",
-        "Baby Jesus",
         "Ol’ Dirty",
         "Russell Tyrone Jones",
         "Old Dirty Bastard"
@@ -8639,6 +8740,1260 @@
       "firstLetter": "Y",
       "sources": {
         "musicBrainz": "https://musicbrainz.org/artist/3fab0883-3a34-4e68-9d44-fe7ab789e396"
+      }
+    },
+    {
+      "id": "a-ap-ferg",
+      "name": "A$AP Ferg",
+      "enabled": true,
+      "aliases": [
+        "Ferg",
+        "Darold Ferguson Jr."
+      ],
+      "birthDate": "1988-10-20",
+      "ageStatus": "37 (Alive)",
+      "hometown": "Harlem",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Trap Lord",
+      "albumTwo": "Always Strive and Prosper",
+      "firstLetter": "A",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=A%24AP%20Ferg&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "aj-tracey",
+      "name": "AJ Tracey",
+      "enabled": true,
+      "aliases": [
+        "Ajay Stephens"
+      ],
+      "birthDate": "1994-02-04",
+      "ageStatus": "32 (Alive)",
+      "hometown": "Ladbroke Grove",
+      "country": "United Kingdom",
+      "gender": "M",
+      "albumOne": "AJ Tracey",
+      "albumTwo": "Flu Game",
+      "firstLetter": "A",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=AJ%20Tracey&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "aitch",
+      "name": "Aitch",
+      "enabled": true,
+      "aliases": [
+        "Harrison Armstrong"
+      ],
+      "birthDate": "1999-12-09",
+      "ageStatus": "26 (Alive)",
+      "hometown": "New Moston",
+      "country": "United Kingdom",
+      "gender": "M",
+      "albumOne": "Close to Home",
+      "albumTwo": "On Your Marks",
+      "firstLetter": "A",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Aitch&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "andre-3000",
+      "name": "André 3000",
+      "enabled": true,
+      "aliases": [
+        "Andre Benjamin"
+      ],
+      "birthDate": "1975-05-27",
+      "ageStatus": "50 (Alive)",
+      "hometown": "Atlanta",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "New Blue Sun",
+      "albumTwo": "The Love Below",
+      "firstLetter": "A",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Andr%C3%A9%203000&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "azealia-banks",
+      "name": "Azealia Banks",
+      "enabled": true,
+      "aliases": [
+        "Azealia Amanda Banks"
+      ],
+      "birthDate": "1991-05-31",
+      "ageStatus": "34 (Alive)",
+      "hometown": "Harlem",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Broke with Expensive Taste",
+      "albumTwo": "Fantasea",
+      "firstLetter": "A",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Azealia%20Banks&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "b-real",
+      "name": "B-Real",
+      "enabled": true,
+      "aliases": [
+        "Louis Freese"
+      ],
+      "birthDate": "1970-06-02",
+      "ageStatus": "55 (Alive)",
+      "hometown": "Los Angeles",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Smoke n Mirrors",
+      "albumTwo": "The Prescription",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=B-Real&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "baby-keem",
+      "name": "Baby Keem",
+      "enabled": true,
+      "aliases": [
+        "Hykeem Carter"
+      ],
+      "birthDate": "2000-10-22",
+      "ageStatus": "25 (Alive)",
+      "hometown": "Carson",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Melodic Blue",
+      "albumTwo": "Die for My Bitch",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Baby%20Keem&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "beanie-sigel",
+      "name": "Beanie Sigel",
+      "enabled": true,
+      "aliases": [
+        "Dwight Grant"
+      ],
+      "birthDate": "1974-03-06",
+      "ageStatus": "52 (Alive)",
+      "hometown": "Philadelphia",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Truth",
+      "albumTwo": "The Reason",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Beanie%20Sigel&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "benny-the-butcher",
+      "name": "Benny the Butcher",
+      "enabled": true,
+      "aliases": [
+        "Benny",
+        "Benny B"
+      ],
+      "birthDate": "1984-11-27",
+      "ageStatus": "41 (Alive)",
+      "hometown": "Buffalo",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Tana Talk 3",
+      "albumTwo": "Burden of Proof",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Benny%20the%20Butcher&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "big-boi",
+      "name": "Big Boi",
+      "enabled": true,
+      "aliases": [
+        "Antwan André Patton",
+        "Daddy Fat Saxxx"
+      ],
+      "birthDate": "1975-02-01",
+      "ageStatus": "51 (Alive)",
+      "hometown": "Savannah",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Sir Lucious Left Foot: The Son of Chico Dusty",
+      "albumTwo": "Vicious Lies and Dangerous Rumors",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Big%20Boi&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "bun-b",
+      "name": "Bun B",
+      "enabled": true,
+      "aliases": [
+        "Bernard Freeman"
+      ],
+      "birthDate": "1973-03-19",
+      "ageStatus": "53 (Alive)",
+      "hometown": "Port Arthur",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Trill",
+      "albumTwo": "II Trill",
+      "firstLetter": "B",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Bun%20B&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "c-murder",
+      "name": "C-Murder",
+      "enabled": true,
+      "aliases": [
+        "Corey Miller"
+      ],
+      "birthDate": "1971-03-09",
+      "ageStatus": "55 (Alive)",
+      "hometown": "New Orleans",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Life or Death",
+      "albumTwo": "Trapped in Crime",
+      "firstLetter": "C",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=C-Murder&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "central-cee",
+      "name": "Central Cee",
+      "enabled": true,
+      "aliases": [
+        "Oakley Caesar-Su"
+      ],
+      "birthDate": "1998-06-04",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Shepherd's Bush",
+      "country": "United Kingdom",
+      "gender": "M",
+      "albumOne": "Wild West",
+      "albumTwo": "23",
+      "firstLetter": "C",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Central%20Cee&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "conway-the-machine",
+      "name": "Conway the Machine",
+      "enabled": true,
+      "aliases": [
+        "Conway"
+      ],
+      "birthDate": "1982-02-16",
+      "ageStatus": "44 (Alive)",
+      "hometown": "Buffalo",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "From King to a God",
+      "albumTwo": "God Don't Make Mistakes",
+      "firstLetter": "C",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Conway%20the%20Machine&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "doechii",
+      "name": "Doechii",
+      "enabled": true,
+      "aliases": [
+        "Jaylah Ji'mya Hickmon"
+      ],
+      "birthDate": "1998-08-14",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Tampa",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Oh the Places You'll Go",
+      "albumTwo": "Alligator Bites Never Heal",
+      "firstLetter": "D",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Doechii&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "drake",
+      "name": "Drake",
+      "enabled": true,
+      "aliases": [
+        "Drizzy",
+        "Aubrey Graham"
+      ],
+      "birthDate": "1986-10-24",
+      "ageStatus": "39 (Alive)",
+      "hometown": "Toronto",
+      "country": "Canada",
+      "gender": "M",
+      "albumOne": "Thank Me Later",
+      "albumTwo": "Take Care",
+      "firstLetter": "D",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Drake&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "earl-sweatshirt",
+      "name": "Earl Sweatshirt",
+      "enabled": true,
+      "aliases": [
+        "Thebe Kgositsile"
+      ],
+      "birthDate": "1994-02-24",
+      "ageStatus": "32 (Alive)",
+      "hometown": "Chicago",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Doris",
+      "albumTwo": "I Don't Like Shit, I Don't Go Outside",
+      "firstLetter": "E",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Earl%20Sweatshirt&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "est-gee",
+      "name": "EST Gee",
+      "enabled": true,
+      "aliases": [
+        "Big Gee",
+        "George Stone"
+      ],
+      "birthDate": "1994-05-11",
+      "ageStatus": "31 (Alive)",
+      "hometown": "Louisville",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Bigger Than Life or Death",
+      "albumTwo": "I Never Felt Nun",
+      "firstLetter": "E",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=EST%20Gee&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "fivio-foreign",
+      "name": "Fivio Foreign",
+      "enabled": true,
+      "aliases": [
+        "Maxie Lee Ryles III"
+      ],
+      "birthDate": "1990-03-29",
+      "ageStatus": "36 (Alive)",
+      "hometown": "Brooklyn",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "B.I.B.L.E.",
+      "albumTwo": "800 B.C.",
+      "firstLetter": "F",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Fivio%20Foreign&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "flo-milli",
+      "name": "Flo Milli",
+      "enabled": true,
+      "aliases": [
+        "Tamia Monique Carter"
+      ],
+      "birthDate": "2000-01-09",
+      "ageStatus": "26 (Alive)",
+      "hometown": "Mobile",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Ho, why is you here?",
+      "albumTwo": "Fine Ho, Stay",
+      "firstLetter": "F",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Flo%20Milli&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "g-herbo",
+      "name": "G Herbo",
+      "enabled": true,
+      "aliases": [
+        "Lil Herb",
+        "Herbert Wright III"
+      ],
+      "birthDate": "1995-10-08",
+      "ageStatus": "30 (Alive)",
+      "hometown": "Chicago",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Welcome to Fazoland",
+      "albumTwo": "PTSD",
+      "firstLetter": "G",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=G%20Herbo&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "glorilla",
+      "name": "GloRilla",
+      "enabled": true,
+      "aliases": [
+        "Gloria Hallelujah Woods"
+      ],
+      "birthDate": "1999-07-28",
+      "ageStatus": "26 (Alive)",
+      "hometown": "Memphis",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Anyways, Life's a Gamble",
+      "albumTwo": "Ehhthang Ehhthang",
+      "firstLetter": "G",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=GloRilla&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "giggs",
+      "name": "Giggs",
+      "enabled": true,
+      "aliases": [
+        "Nathaniel Thompson"
+      ],
+      "birthDate": "1983-05-11",
+      "ageStatus": "42 (Alive)",
+      "hometown": "Peckham",
+      "country": "United Kingdom",
+      "gender": "M",
+      "albumOne": "Walk in da Park",
+      "albumTwo": "Let Em Ave It",
+      "firstLetter": "G",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Giggs&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "headie-one",
+      "name": "Headie One",
+      "enabled": true,
+      "aliases": [
+        "Irving Adjei"
+      ],
+      "birthDate": "1994-10-26",
+      "ageStatus": "31 (Alive)",
+      "hometown": "Tottenham",
+      "country": "United Kingdom",
+      "gender": "M",
+      "albumOne": "Edna",
+      "albumTwo": "No More Leaks",
+      "firstLetter": "H",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Headie%20One&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "ice-spice",
+      "name": "Ice Spice",
+      "enabled": true,
+      "aliases": [
+        "Isis Gaston"
+      ],
+      "birthDate": "2000-01-01",
+      "ageStatus": "26 (Alive)",
+      "hometown": "The Bronx",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Like..?",
+      "albumTwo": "Y2K!",
+      "firstLetter": "I",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Ice%20Spice&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "iggy-azalea",
+      "name": "Iggy Azalea",
+      "enabled": true,
+      "aliases": [
+        "Amethyst Amelia Kelly"
+      ],
+      "birthDate": "1990-06-07",
+      "ageStatus": "35 (Alive)",
+      "hometown": "Sydney",
+      "country": "Australia",
+      "gender": "F",
+      "albumOne": "The New Classic",
+      "albumTwo": "In My Defense",
+      "firstLetter": "I",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Iggy%20Azalea&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "isaiah-rashad",
+      "name": "Isaiah Rashad",
+      "enabled": true,
+      "aliases": [
+        "Zaywop"
+      ],
+      "birthDate": "1991-05-16",
+      "ageStatus": "34 (Alive)",
+      "hometown": "Chattanooga",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Sun's Tirade",
+      "albumTwo": "The House Is Burning",
+      "firstLetter": "I",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Isaiah%20Rashad&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "jack-harlow",
+      "name": "Jack Harlow",
+      "enabled": true,
+      "aliases": [
+        "Jackman Thomas Harlow"
+      ],
+      "birthDate": "1998-03-13",
+      "ageStatus": "28 (Alive)",
+      "hometown": "Louisville",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "That's What They All Say",
+      "albumTwo": "Come Home the Kids Miss You",
+      "firstLetter": "J",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Jack%20Harlow&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "juelz-santana",
+      "name": "Juelz Santana",
+      "enabled": true,
+      "aliases": [
+        "LaRon James"
+      ],
+      "birthDate": "1982-02-18",
+      "ageStatus": "44 (Alive)",
+      "hometown": "Harlem",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "From Me to U",
+      "albumTwo": "What the Game's Been Missing!",
+      "firstLetter": "J",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Juelz%20Santana&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "killer-mike",
+      "name": "Killer Mike",
+      "enabled": true,
+      "aliases": [
+        "Michael Render"
+      ],
+      "birthDate": "1975-04-20",
+      "ageStatus": "51 (Alive)",
+      "hometown": "Atlanta",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Monster",
+      "albumTwo": "Michael",
+      "firstLetter": "K",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Killer%20Mike&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "lauryn-hill",
+      "name": "Lauryn Hill",
+      "enabled": true,
+      "aliases": [
+        "Ms. Lauryn Hill"
+      ],
+      "birthDate": "1975-05-26",
+      "ageStatus": "50 (Alive)",
+      "hometown": "East Orange",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "The Miseducation of Lauryn Hill",
+      "albumTwo": "MTV Unplugged No. 2.0",
+      "firstLetter": "L",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Lauryn%20Hill&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "lil-baby",
+      "name": "Lil Baby",
+      "enabled": true,
+      "aliases": [
+        "Dominique Jones"
+      ],
+      "birthDate": "1994-12-03",
+      "ageStatus": "31 (Alive)",
+      "hometown": "Atlanta",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Harder Than Ever",
+      "albumTwo": "My Turn",
+      "firstLetter": "L",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Lil%20Baby&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "lil-tecca",
+      "name": "Lil Tecca",
+      "enabled": true,
+      "aliases": [
+        "Tyler-Justin Anthony Sharpe"
+      ],
+      "birthDate": "2002-08-26",
+      "ageStatus": "23 (Alive)",
+      "hometown": "Queens",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "We Love You Tecca",
+      "albumTwo": "Virgo World",
+      "firstLetter": "L",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Lil%20Tecca&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "lloyd-banks",
+      "name": "Lloyd Banks",
+      "enabled": true,
+      "aliases": [
+        "Christopher Lloyd"
+      ],
+      "birthDate": "1982-04-30",
+      "ageStatus": "44 (Alive)",
+      "hometown": "South Jamaica",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Hunger for More",
+      "albumTwo": "Rotten Apple",
+      "firstLetter": "L",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Lloyd%20Banks&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "mase",
+      "name": "Mase",
+      "enabled": true,
+      "aliases": [
+        "Ma$e",
+        "Mason Betha"
+      ],
+      "birthDate": "1975-08-27",
+      "ageStatus": "50 (Alive)",
+      "hometown": "Harlem",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Harlem World",
+      "albumTwo": "Double Up",
+      "firstLetter": "M",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Mase&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "memphis-bleek",
+      "name": "Memphis Bleek",
+      "enabled": true,
+      "aliases": [
+        "Malik Cox"
+      ],
+      "birthDate": "1978-06-23",
+      "ageStatus": "47 (Alive)",
+      "hometown": "Brooklyn",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Coming of Age",
+      "albumTwo": "The Understanding",
+      "firstLetter": "M",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Memphis%20Bleek&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "moneybagg-yo",
+      "name": "Moneybagg Yo",
+      "enabled": true,
+      "aliases": [
+        "DeMario White"
+      ],
+      "birthDate": "1991-09-22",
+      "ageStatus": "34 (Alive)",
+      "hometown": "Memphis",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Federal 3X",
+      "albumTwo": "A Gangsta's Pain",
+      "firstLetter": "M",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Moneybagg%20Yo&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "nav",
+      "name": "NAV",
+      "enabled": true,
+      "aliases": [
+        "Navraj Singh Goraya"
+      ],
+      "birthDate": "1989-11-03",
+      "ageStatus": "36 (Alive)",
+      "hometown": "Toronto",
+      "country": "Canada",
+      "gender": "M",
+      "albumOne": "NAV",
+      "albumTwo": "Bad Habits",
+      "firstLetter": "N",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=NAV&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "noname",
+      "name": "Noname",
+      "enabled": true,
+      "aliases": [
+        "Fatimah Warner"
+      ],
+      "birthDate": "1991-09-18",
+      "ageStatus": "34 (Alive)",
+      "hometown": "Chicago",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Telefone",
+      "albumTwo": "Room 25",
+      "firstLetter": "N",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Noname&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "phife-dawg",
+      "name": "Phife Dawg",
+      "enabled": true,
+      "aliases": [
+        "Phife",
+        "Malik Taylor"
+      ],
+      "birthDate": "1970-11-20",
+      "deathDate": "2016-03-22",
+      "ageStatus": "45 (Deceased)",
+      "hometown": "Queens",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Ventilation: Da LP",
+      "albumTwo": "We Got It from Here... Thank You 4 Your Service",
+      "firstLetter": "P",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Phife%20Dawg&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "pimp-c",
+      "name": "Pimp C",
+      "enabled": true,
+      "aliases": [
+        "Chad Butler"
+      ],
+      "birthDate": "1973-12-29",
+      "deathDate": "2007-12-04",
+      "ageStatus": "33 (Deceased)",
+      "hometown": "Port Arthur",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Pimpalation",
+      "albumTwo": "The Sweet James Jones Stories",
+      "firstLetter": "P",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Pimp%20C&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "polo-g",
+      "name": "Polo G",
+      "enabled": true,
+      "aliases": [
+        "Taurus Bartlett"
+      ],
+      "birthDate": "1999-01-06",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Chicago",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Die a Legend",
+      "albumTwo": "The Goat",
+      "firstLetter": "P",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Polo%20G&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "prodigy",
+      "name": "Prodigy",
+      "enabled": true,
+      "aliases": [
+        "Albert Johnson"
+      ],
+      "birthDate": "1974-11-02",
+      "deathDate": "2017-06-20",
+      "ageStatus": "42 (Deceased)",
+      "hometown": "Hempstead",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "H.N.I.C.",
+      "albumTwo": "Return of the Mac",
+      "firstLetter": "P",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Prodigy&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "queen-latifah",
+      "name": "Queen Latifah",
+      "enabled": true,
+      "aliases": [
+        "Dana Owens"
+      ],
+      "birthDate": "1970-03-18",
+      "ageStatus": "56 (Alive)",
+      "hometown": "Newark",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "All Hail the Queen",
+      "albumTwo": "Nature of a Sista",
+      "firstLetter": "Q",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Queen%20Latifah&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "rico-nasty",
+      "name": "Rico Nasty",
+      "enabled": true,
+      "aliases": [
+        "Maria-Cecilia Simone Kelly"
+      ],
+      "birthDate": "1997-05-07",
+      "ageStatus": "29 (Alive)",
+      "hometown": "New York",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Nasty",
+      "albumTwo": "Nightmare Vacation",
+      "firstLetter": "R",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Rico%20Nasty&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "rich-brian",
+      "name": "Rich Brian",
+      "enabled": true,
+      "aliases": [
+        "Rich Chigga",
+        "Brian Immanuel"
+      ],
+      "birthDate": "1999-09-03",
+      "ageStatus": "26 (Alive)",
+      "hometown": "Jakarta",
+      "country": "Indonesia",
+      "gender": "M",
+      "albumOne": "Amen",
+      "albumTwo": "The Sailor",
+      "firstLetter": "R",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Rich%20Brian&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "rick-ross",
+      "name": "Rick Ross",
+      "enabled": true,
+      "aliases": [
+        "Ricky Rozay",
+        "William Roberts"
+      ],
+      "birthDate": "1976-01-28",
+      "ageStatus": "50 (Alive)",
+      "hometown": "Carol City",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Port of Miami",
+      "albumTwo": "Trilla",
+      "firstLetter": "R",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Rick%20Ross&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "rod-wave",
+      "name": "Rod Wave",
+      "enabled": true,
+      "aliases": [
+        "Rodarius Green"
+      ],
+      "birthDate": "1999-08-27",
+      "ageStatus": "26 (Alive)",
+      "hometown": "St. Petersburg",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Ghetto Gospel",
+      "albumTwo": "Pray 4 Love",
+      "firstLetter": "R",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Rod%20Wave&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "roddy-ricch",
+      "name": "Roddy Ricch",
+      "enabled": true,
+      "aliases": [
+        "Rodrick Moore Jr."
+      ],
+      "birthDate": "1998-10-22",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Compton",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Please Excuse Me for Being Antisocial",
+      "albumTwo": "Live Life Fast",
+      "firstLetter": "R",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Roddy%20Ricch&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "saweetie",
+      "name": "Saweetie",
+      "enabled": true,
+      "aliases": [
+        "Diamonté Harper"
+      ],
+      "birthDate": "1993-07-02",
+      "ageStatus": "32 (Alive)",
+      "hometown": "Santa Clara",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "High Maintenance",
+      "albumTwo": "The Single Life",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Saweetie&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "schoolboy-q",
+      "name": "Schoolboy Q",
+      "enabled": true,
+      "aliases": [
+        "ScHoolboy Q",
+        "Quincy Hanley"
+      ],
+      "birthDate": "1986-10-26",
+      "ageStatus": "39 (Alive)",
+      "hometown": "South Central Los Angeles",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Setbacks",
+      "albumTwo": "Oxymoron",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Schoolboy%20Q&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "sexyy-red",
+      "name": "Sexyy Red",
+      "enabled": true,
+      "aliases": [
+        "Janae Wherry"
+      ],
+      "birthDate": "1998-04-15",
+      "ageStatus": "28 (Alive)",
+      "hometown": "St. Louis",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Hood Hottest Princess",
+      "albumTwo": "In Sexyy We Trust",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Sexyy%20Red&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "sheek-louch",
+      "name": "Sheek Louch",
+      "enabled": true,
+      "aliases": [
+        "Sean Jacobs"
+      ],
+      "birthDate": "1976-11-09",
+      "ageStatus": "49 (Alive)",
+      "hometown": "Yonkers",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Walk Witt Me",
+      "albumTwo": "Silverback Guerilla",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Sheek%20Louch&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "sheck-wes",
+      "name": "Sheck Wes",
+      "enabled": true,
+      "aliases": [
+        "Khadimou Fall"
+      ],
+      "birthDate": "1998-09-10",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Harlem",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Mudboy",
+      "albumTwo": "Hell 2 Paradise",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Sheck%20Wes&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "sleepy-hallow",
+      "name": "Sleepy Hallow",
+      "enabled": true,
+      "aliases": [
+        "Tegan Chambers"
+      ],
+      "birthDate": "1999-12-20",
+      "ageStatus": "26 (Alive)",
+      "hometown": "Brooklyn",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Still Sleep?",
+      "albumTwo": "Boy Meets World",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Sleepy%20Hallow&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "silkk-the-shocker",
+      "name": "Silkk the Shocker",
+      "enabled": true,
+      "aliases": [
+        "Vyshonn Miller",
+        "Silkk"
+      ],
+      "birthDate": "1976-06-18",
+      "ageStatus": "49 (Alive)",
+      "hometown": "New Orleans",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Shocker",
+      "albumTwo": "Charge It 2 da Game",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Silkk%20the%20Shocker&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "styles-p",
+      "name": "Styles P",
+      "enabled": true,
+      "aliases": [
+        "David Styles"
+      ],
+      "birthDate": "1974-11-28",
+      "ageStatus": "51 (Alive)",
+      "hometown": "Queens",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "A Gangster and a Gentleman",
+      "albumTwo": "Time Is Money",
+      "firstLetter": "S",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Styles%20P&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "takeoff",
+      "name": "Takeoff",
+      "enabled": true,
+      "aliases": [
+        "Kirshnik Ball"
+      ],
+      "birthDate": "1994-06-18",
+      "deathDate": "2022-11-01",
+      "ageStatus": "28 (Deceased)",
+      "hometown": "Lawrenceville",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "The Last Rocket",
+      "albumTwo": "Only Built for Infinity Links",
+      "firstLetter": "T",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Takeoff&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "tee-grizzley",
+      "name": "Tee Grizzley",
+      "enabled": true,
+      "aliases": [
+        "Terry Wallace Jr."
+      ],
+      "birthDate": "1994-04-23",
+      "ageStatus": "32 (Alive)",
+      "hometown": "Detroit",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "My Moment",
+      "albumTwo": "Activated",
+      "firstLetter": "T",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Tee%20Grizzley&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "the-kid-laroi",
+      "name": "The Kid LAROI",
+      "enabled": true,
+      "aliases": [
+        "Kid Laroi",
+        "Charlton Howard"
+      ],
+      "birthDate": "2003-08-17",
+      "ageStatus": "22 (Alive)",
+      "hometown": "Waterloo",
+      "country": "Australia",
+      "gender": "M",
+      "albumOne": "F*CK LOVE",
+      "albumTwo": "The First Time",
+      "firstLetter": "T",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=The%20Kid%20LAROI&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "tierra-whack",
+      "name": "Tierra Whack",
+      "enabled": true,
+      "aliases": [
+        "Tierra Williams"
+      ],
+      "birthDate": "1995-08-11",
+      "ageStatus": "30 (Alive)",
+      "hometown": "Philadelphia",
+      "country": "United States",
+      "gender": "F",
+      "albumOne": "Whack World",
+      "albumTwo": "World Wide Whack",
+      "firstLetter": "T",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Tierra%20Whack&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "tory-lanez",
+      "name": "Tory Lanez",
+      "enabled": true,
+      "aliases": [
+        "Daystar Peterson"
+      ],
+      "birthDate": "1992-07-27",
+      "ageStatus": "33 (Alive)",
+      "hometown": "Brampton",
+      "country": "Canada",
+      "gender": "M",
+      "albumOne": "I Told You",
+      "albumTwo": "Memories Don't Die",
+      "firstLetter": "T",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Tory%20Lanez&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "westside-gunn",
+      "name": "Westside Gunn",
+      "enabled": true,
+      "aliases": [
+        "Alvin Worthy"
+      ],
+      "birthDate": "1982-07-27",
+      "ageStatus": "43 (Alive)",
+      "hometown": "Buffalo",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Flygod",
+      "albumTwo": "Pray for Paris",
+      "firstLetter": "W",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Westside%20Gunn&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "yung-gravy",
+      "name": "Yung Gravy",
+      "enabled": true,
+      "aliases": [
+        "Matthew Hauri",
+        "Mr. Butter"
+      ],
+      "birthDate": "1996-03-19",
+      "ageStatus": "30 (Alive)",
+      "hometown": "Rochester",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Sensational",
+      "albumTwo": "Marvelous",
+      "firstLetter": "Y",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Yung%20Gravy&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "yung-lean",
+      "name": "Yung Lean",
+      "enabled": true,
+      "aliases": [
+        "Jonatan Leandoer Håstad",
+        "Lean"
+      ],
+      "birthDate": "1996-07-18",
+      "ageStatus": "29 (Alive)",
+      "hometown": "Stockholm",
+      "country": "Sweden",
+      "gender": "M",
+      "albumOne": "Unknown Memory",
+      "albumTwo": "Warlord",
+      "firstLetter": "Y",
+      "sources": {
+        "musicBrainz": "https://musicbrainz.org/search?query=Yung%20Lean&type=artist&method=indexed"
       }
     }
   ]

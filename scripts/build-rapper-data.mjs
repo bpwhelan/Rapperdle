@@ -1,4 +1,4 @@
-import { writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 
 const USER_AGENT = "RapperleDataBuilder/1.0 (local project; data refresh script)";
 const TODAY = new Date("2026-05-09T00:00:00Z");
@@ -281,6 +281,18 @@ async function getAlbums(artistId) {
     .slice(0, 2);
 }
 
+async function readExistingRoster() {
+  try {
+    return JSON.parse(await readFile("rappers.json", "utf8"));
+  } catch (error) {
+    if (error.code === "ENOENT") {
+      return null;
+    }
+
+    throw error;
+  }
+}
+
 async function main() {
   const artists = await searchArtists();
   console.log(`Candidate artists with required facts: ${artists.length}`);
@@ -336,15 +348,45 @@ async function main() {
       return { ...rapper, id: revisedId };
     });
 
+  const previousData = await readExistingRoster();
+  const previousRappers = Array.isArray(previousData?.rappers) ? previousData.rappers : [];
+  const generatedById = new Map(uniqueRappers.map((rapper) => [rapper.id, rapper]));
+  const mergedRappers = [];
+  const seenIds = new Set();
+
+  for (const previousRapper of previousRappers) {
+    const generatedRapper = generatedById.get(previousRapper.id);
+
+    if (generatedRapper) {
+      mergedRappers.push({
+        ...generatedRapper,
+        ...(previousRapper.enabled !== undefined ? { enabled: previousRapper.enabled } : {}),
+      });
+    } else {
+      mergedRappers.push(previousRapper);
+    }
+
+    seenIds.add(previousRapper.id);
+  }
+
+  for (const generatedRapper of uniqueRappers) {
+    if (!seenIds.has(generatedRapper.id)) {
+      mergedRappers.push(generatedRapper);
+    }
+  }
+
   const output = {
     generatedAt: new Date().toISOString(),
     sourceSummary:
-      "Roster generated from MusicBrainz artist search records and MusicBrainz release-group album records. Entries are MusicBrainz Person artists from the US or UK with rap-related tags/disambiguation, known birth date, birthplace, gender, and at least two album release groups.",
-    rappers: uniqueRappers,
+      "Roster generated from MusicBrainz artist search records and MusicBrainz release-group album records, with manually curated entries and disabled IDs preserved across refreshes.",
+    disabledRapperIds: Array.isArray(previousData?.disabledRapperIds)
+      ? previousData.disabledRapperIds
+      : [],
+    rappers: mergedRappers,
   };
 
   await writeFile("rappers.json", `${JSON.stringify(output, null, 2)}\n`);
-  console.log(`Wrote rappers.json with ${uniqueRappers.length} rappers`);
+  console.log(`Wrote rappers.json with ${mergedRappers.length} rappers`);
 }
 
 main().catch((error) => {
