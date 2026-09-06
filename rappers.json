@@ -9938,6 +9938,24 @@
       }
     },
     {
+      "id": "trevormarks3",
+      "name": "TrevorMarks3",
+      "enabled": true,
+      "aliases": [],
+      "birthDate": "1998-11-03",
+      "ageStatus": "27 (Alive)",
+      "hometown": "Baltimore",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Third Time's the Charm",
+      "albumTwo": "Marks the Spot",
+      "firstLetter": "T",
+      "metadataStatus": "User-requested fictional placeholder data",
+      "sources": {
+        "manual": "User-requested fictional placeholder data"
+      }
+    },
+    {
       "id": "westside-gunn",
       "name": "Westside Gunn",
       "enabled": true,
@@ -9994,6 +10012,24 @@
       "firstLetter": "Y",
       "sources": {
         "musicBrainz": "https://musicbrainz.org/search?query=Yung%20Lean&type=artist&method=indexed"
+      }
+    },
+    {
+      "id": "yung-syde",
+      "name": "Yung Syde",
+      "enabled": true,
+      "aliases": [],
+      "birthDate": "2001-04-17",
+      "ageStatus": "25 (Alive)",
+      "hometown": "Riverside",
+      "country": "United States",
+      "gender": "M",
+      "albumOne": "Side Effects",
+      "albumTwo": "Syde Stories",
+      "firstLetter": "Y",
+      "metadataStatus": "User-requested fictional placeholder data",
+      "sources": {
+        "manual": "User-requested fictional placeholder data"
       }
     }
   ]
