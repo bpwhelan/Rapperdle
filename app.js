@@ -7,7 +7,7 @@ const dataUrl = "rappers.json";
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const easternStandardOffsetHours = 5;
 const easternStandardOffsetMilliseconds = easternStandardOffsetHours * 60 * 60 * 1000;
-const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 1) / millisecondsPerDay);
+const schedule = window.RapperdleSchedule;
 const includeStateWithHometown = false;
 const baseClueFields = [
   ["Age / Status / Gender", "ageStatus", true],
@@ -113,12 +113,6 @@ function getEasternStandardDate(date = new Date()) {
   return new Date(date.getTime() - easternStandardOffsetMilliseconds);
 }
 
-function getEasternStandardPuzzleDay(date = new Date()) {
-  const estDate = getEasternStandardDate(date);
-
-  return Math.floor(Date.UTC(estDate.getUTCFullYear(), estDate.getUTCMonth(), estDate.getUTCDate()) / millisecondsPerDay);
-}
-
 function getNextEasternStandardResetDelay(date = new Date()) {
   const estDate = getEasternStandardDate(date);
   const nextResetTime = Date.UTC(
@@ -134,56 +128,20 @@ function getNextEasternStandardResetDelay(date = new Date()) {
   return Math.max(0, nextResetTime - date.getTime());
 }
 
-function hashSeed(value) {
-  let hash = 2166136261;
-
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-
-  return hash >>> 0;
-}
-
-function greatestCommonDivisor(left, right) {
-  let a = Math.abs(left);
-  let b = Math.abs(right);
-
-  while (b) {
-    const next = a % b;
-    a = b;
-    b = next;
-  }
-
-  return a;
-}
-
-function getCoprimeStep(seed, size) {
-  let step = (hashSeed(seed) % size) || 1;
-
-  while (greatestCommonDivisor(step, size) !== 1) {
-    step = (step + 1) % size || 1;
-  }
-
-  return step;
-}
-
-function selectDailyRapper(roster, date = new Date()) {
-  const size = roster.length;
-  const dayOffset = Math.max(0, getEasternStandardPuzzleDay(date) - firstPuzzleDay);
-  const cycle = Math.floor(dayOffset / size);
-  const position = dayOffset % size;
-  const offset = hashSeed(`rapperdle-offset-${cycle}-${size}`) % size;
-  const step = getCoprimeStep(`rapperdle-step-${cycle}-${size}`, size);
-
-  return roster[(offset + position * step) % size];
-}
-
 function setDailyRapper(date = new Date()) {
-  answer = selectDailyRapper(rappers, date);
+  answer = schedule.selectDailyRapper(rappers, date);
   clueFields = getAvailableClueFields(answer);
   maxClues = clueFields.length;
 }
+
+window.addEventListener("storage", (event) => {
+  if (event.key !== schedule.storageKey || !rappers.length) {
+    return;
+  }
+
+  setDailyRapper();
+  resetGame();
+});
 
 function scheduleDailyReset() {
   if (dailyResetTimer) {

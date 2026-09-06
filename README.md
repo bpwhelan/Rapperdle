@@ -12,7 +12,7 @@ npm run dev
 
 ## Admin Dashboard
 
-Open [`/admin.html`](admin.html) for the unauthed, read-only roster dashboard. It includes roster health checks, searchable active/disabled records, and the next 14 deterministic daily answers.
+Open [`/admin.html`](admin.html) for the roster dashboard. It includes roster health checks, searchable active/disabled records, the next 14 daily answers, and a “Make today” button for playable rappers. The selected override and shifted schedule are saved in browser storage, so they apply to you and friends using that same browser profile.
 
 ## Deploy To Vercel
 

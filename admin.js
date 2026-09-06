@@ -1,8 +1,6 @@
 const dataUrl = "rappers.json";
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
-const easternStandardOffsetHours = 5;
-const easternStandardOffsetMilliseconds = easternStandardOffsetHours * 60 * 60 * 1000;
-const firstPuzzleDay = Math.floor(Date.UTC(2026, 0, 1) / millisecondsPerDay);
+const schedule = window.RapperdleSchedule;
 const baseClueFields = [
   ["Age / Status / Gender", "ageStatus", true],
   ["Hometown", "hometown"],
@@ -19,6 +17,9 @@ const elements = {
   totalCount: document.querySelector("#total-count"),
   countryCount: document.querySelector("#country-count"),
   upcomingBody: document.querySelector("#upcoming-body"),
+  overrideStatus: document.querySelector("#override-status"),
+  overrideStatusMessage: document.querySelector("#override-status-message"),
+  clearDailyOverride: document.querySelector("#clear-daily-override"),
   healthList: document.querySelector("#health-list"),
   generatedAt: document.querySelector("#generated-at"),
   sourceSummary: document.querySelector("#source-summary"),
@@ -49,64 +50,6 @@ function formatNumber(value) {
 
 function isDisabled(rapper) {
   return rapper.enabled === false || disabledIds.has(rapper.id);
-}
-
-function getEasternStandardPuzzleDay(date = new Date()) {
-  const estDate = new Date(date.getTime() - easternStandardOffsetMilliseconds);
-  return Math.floor(
-    Date.UTC(estDate.getUTCFullYear(), estDate.getUTCMonth(), estDate.getUTCDate()) /
-      millisecondsPerDay
-  );
-}
-
-function hashSeed(value) {
-  let hash = 2166136261;
-
-  for (let index = 0; index < value.length; index += 1) {
-    hash ^= value.charCodeAt(index);
-    hash = Math.imul(hash, 16777619);
-  }
-
-  return hash >>> 0;
-}
-
-function greatestCommonDivisor(left, right) {
-  let a = Math.abs(left);
-  let b = Math.abs(right);
-
-  while (b) {
-    const next = a % b;
-    a = b;
-    b = next;
-  }
-
-  return a;
-}
-
-function getCoprimeStep(seed, size) {
-  let step = (hashSeed(seed) % size) || 1;
-
-  while (greatestCommonDivisor(step, size) !== 1) {
-    step = (step + 1) % size || 1;
-  }
-
-  return step;
-}
-
-function selectDailyRapper(availableRappers, date) {
-  const size = availableRappers.length;
-
-  if (!size) {
-    return null;
-  }
-
-  const dayOffset = Math.max(0, getEasternStandardPuzzleDay(date) - firstPuzzleDay);
-  const cycle = Math.floor(dayOffset / size);
-  const position = dayOffset % size;
-  const offset = hashSeed("rapperdle-offset-" + cycle + "-" + size) % size;
-  const step = getCoprimeStep("rapperdle-step-" + cycle + "-" + size, size);
-
-  return availableRappers[(offset + position * step) % size];
 }
 
 function getAvailableClueFields(rapper) {
@@ -255,14 +198,43 @@ function renderHealth() {
   });
 }
 
+function getActiveDailyOverride() {
+  const override = schedule.readDailyOverride();
+  const rapper = override && activeRappers.find((item) => item.id === override.rapperId);
+
+  return rapper ? { override, rapper } : null;
+}
+
+function renderOverrideStatus() {
+  const activeOverride = getActiveDailyOverride();
+
+  if (!activeOverride) {
+    elements.overrideStatus.hidden = true;
+    return;
+  }
+
+  const todayPuzzleDay = schedule.getEasternStandardPuzzleDay();
+
+  if (activeOverride.override.puzzleDay === todayPuzzleDay) {
+    elements.overrideStatusMessage.textContent =
+      `${activeOverride.rapper.name} is today's rapper. The remaining answers have been shifted back one slot.`;
+  } else {
+    const todayAnswer = schedule.selectDailyRapper(activeRappers);
+    elements.overrideStatusMessage.textContent =
+      `Schedule override from ${formatPuzzleDate(activeOverride.override.puzzleDay)} is active. Today's rapper is ${todayAnswer.name}.`;
+  }
+
+  elements.overrideStatus.hidden = false;
+}
+
 function renderSchedule() {
   clearElement(elements.upcomingBody);
 
-  const todayPuzzleDay = getEasternStandardPuzzleDay();
+  const todayPuzzleDay = schedule.getEasternStandardPuzzleDay();
 
   for (let index = 0; index < 14; index += 1) {
     const puzzleDay = todayPuzzleDay + index;
-    const answer = selectDailyRapper(
+    const answer = schedule.selectDailyRapper(
       activeRappers,
       new Date(puzzleDay * millisecondsPerDay + 12 * 60 * 60 * 1000)
     );
@@ -293,6 +265,8 @@ function renderSchedule() {
     );
     elements.upcomingBody.append(row);
   }
+
+  renderOverrideStatus();
 }
 
 function matchesRosterFilter(rapper, query, status) {
@@ -328,6 +302,7 @@ function renderRoster() {
 
   const query = normalize(elements.rosterSearch.value);
   const status = elements.statusFilter.value;
+  const activeOverride = getActiveDailyOverride();
   const filteredRappers = roster.filter((rapper) => matchesRosterFilter(rapper, query, status));
 
   filteredRappers.forEach((rapper) => {
@@ -344,6 +319,28 @@ function renderRoster() {
     statusCell.append(statusBadge);
 
     const nameCell = makeStackedCell(rapper.name, rapper.id, "rapper-cell");
+    const todayCell = document.createElement("td");
+    if (!disabled) {
+      const todayButton = document.createElement("button");
+      const isToday =
+        activeOverride?.override.puzzleDay === schedule.getEasternStandardPuzzleDay() &&
+        activeOverride.rapper.id === rapper.id;
+      todayButton.type = "button";
+      todayButton.className = "quiet-button set-today-button";
+      todayButton.textContent = isToday ? "Today's rapper" : "Make today";
+      todayButton.disabled = isToday;
+      todayButton.title = isToday
+        ? "This rapper is already today's rapper"
+        : "Make this rapper today's rapper and shift the following answers";
+      todayButton.addEventListener("click", () => {
+        schedule.saveDailyOverride(rapper.id);
+        renderSchedule();
+        renderRoster();
+      });
+      todayCell.append(todayButton);
+    } else {
+      todayCell.textContent = "—";
+    }
     const locationCell = makeStackedCell(rapper.hometown, "");
     const countryCell = document.createElement("td");
     countryCell.textContent = rapper.country || "—";
@@ -358,7 +355,7 @@ function renderRoster() {
     aliasesCell.className = "alias-list";
     aliasesCell.textContent = rapper.aliases?.length ? rapper.aliases.join(" · ") : "—";
 
-    row.append(statusCell, nameCell, locationCell, countryCell, albumsCell, aliasesCell);
+    row.append(statusCell, nameCell, todayCell, locationCell, countryCell, albumsCell, aliasesCell);
     elements.rosterBody.append(row);
   });
 
@@ -420,6 +417,21 @@ elements.clearFilters.addEventListener("click", () => {
   elements.statusFilter.value = "all";
   renderRoster();
   elements.rosterSearch.focus();
+});
+
+elements.clearDailyOverride.addEventListener("click", () => {
+  schedule.clearDailyOverride();
+  renderSchedule();
+  renderRoster();
+});
+
+window.addEventListener("storage", (event) => {
+  if (event.key !== schedule.storageKey) {
+    return;
+  }
+
+  renderSchedule();
+  renderRoster();
 });
 
 loadRoster().catch((error) => {

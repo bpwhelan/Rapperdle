@@ -184,6 +184,29 @@
   line-height: 1.45;
 }
 
+.override-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 22px;
+  border-top: 1px solid rgba(22, 217, 160, 0.2);
+  border-bottom: 1px solid rgba(22, 217, 160, 0.2);
+  color: var(--accent);
+  background: rgba(22, 217, 160, 0.07);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.override-status[hidden] {
+  display: none;
+}
+
+.override-status .quiet-button {
+  flex: 0 0 auto;
+  min-height: 34px;
+}
+
 .panel-tag {
   flex: 0 0 auto;
   padding: 7px 9px;
@@ -398,8 +421,21 @@
   color: var(--accent);
 }
 
+.quiet-button:disabled {
+  border-color: rgba(22, 217, 160, 0.22);
+  color: var(--accent);
+  background: rgba(22, 217, 160, 0.07);
+  cursor: default;
+}
+
+.set-today-button {
+  min-height: 34px;
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
 .roster-table {
-  min-width: 940px;
+  min-width: 1050px;
 }
 
 .roster-table td {
@@ -493,6 +529,13 @@
 
   .health-list,
   .metadata-list {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .override-status {
+    align-items: start;
+    flex-direction: column;
     padding-left: 16px;
     padding-right: 16px;
   }
