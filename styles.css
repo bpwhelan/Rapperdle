@@ -98,6 +98,97 @@ h1 {
   font-size: 1.35rem;
 }
 
+.puzzle-bar,
+.puzzle-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.puzzle-bar {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.puzzle-date {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.quiet-button {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--panel);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.quiet-button:hover:not(:disabled),
+.quiet-button[aria-expanded="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+button:focus-visible,
+.archive-controls input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.quiet-button[hidden],
+.archive-panel[hidden] {
+  display: none;
+}
+
+.archive-panel {
+  margin-bottom: 16px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.archive-panel label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.archive-controls {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 8px;
+}
+
+.archive-controls input {
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.archive-hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
 .turntable {
   position: absolute;
   top: 28px;
@@ -272,6 +363,7 @@ h1 {
 }
 
 .input-wrap button,
+.archive-play,
 .play-again {
   min-height: 54px;
   padding: 0 18px;
@@ -284,8 +376,13 @@ h1 {
 }
 
 .input-wrap button:hover,
+.archive-play:hover,
 .play-again:hover {
   filter: brightness(1.06);
+}
+
+.archive-play {
+  min-height: 44px;
 }
 
 .give-up {
@@ -443,6 +540,14 @@ h1 {
 }
 
 @media (max-width: 430px) {
+  .archive-controls {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+  }
+
+  .archive-play {
+    grid-column: 1 / -1;
+  }
+
   .brand-row {
     display: block;
   }

@@ -23,6 +23,9 @@ let guesses = [];
 let gameOver = false;
 let activeSuggestion = -1;
 let dailyResetTimer = null;
+let archivedPuzzleDay = null;
+let activePuzzleDay = null;
+const gameProgress = new Map();
 
 const clueGrid = document.querySelector("#clue-grid");
 const clueCount = document.querySelector("#clue-count");
@@ -32,6 +35,14 @@ const suggestions = document.querySelector("#suggestions");
 const feedback = document.querySelector("#feedback");
 const history = document.querySelector("#guess-history");
 const giveUpBtn = document.querySelector("#give-up-btn");
+const puzzleDate = document.querySelector("#puzzle-date");
+const archiveBtn = document.querySelector("#archive-btn");
+const todayBtn = document.querySelector("#today-btn");
+const archivePanel = document.querySelector("#archive-panel");
+const archiveForm = document.querySelector("#archive-form");
+const archiveDate = document.querySelector("#archive-date");
+const previousDayBtn = document.querySelector("#previous-day-btn");
+const nextDayBtn = document.querySelector("#next-day-btn");
 
 function normalize(value) {
   return value
@@ -93,7 +104,10 @@ function getAgeStatus(rapper) {
     return rapper.ageStatus;
   }
 
-  const endDate = rapper.deathDate ? new Date(`${rapper.deathDate}T00:00:00Z`) : new Date();
+  const clueDate = archivedPuzzleDay === null ? new Date() : new Date(activePuzzleDay * millisecondsPerDay);
+  const deathDate = rapper.deathDate ? new Date(`${rapper.deathDate}T00:00:00Z`) : null;
+  const deceased = deathDate && deathDate <= clueDate;
+  const endDate = deceased ? deathDate : clueDate;
   const birthDate = new Date(`${rapper.birthDate}T00:00:00Z`);
   let age = endDate.getUTCFullYear() - birthDate.getUTCFullYear();
   const monthDelta = endDate.getUTCMonth() - birthDate.getUTCMonth();
@@ -102,7 +116,7 @@ function getAgeStatus(rapper) {
     age -= 1;
   }
 
-  return `${age} (${rapper.deathDate ? "Deceased" : "Alive"})`;
+  return `${age} (${deceased ? "Deceased" : "Alive"})`;
 }
 
 function getAvailableClueFields(rapper) {
@@ -128,19 +142,106 @@ function getNextEasternStandardResetDelay(date = new Date()) {
   return Math.max(0, nextResetTime - date.getTime());
 }
 
-function setDailyRapper(date = new Date()) {
-  answer = schedule.selectDailyRapper(rappers, date);
-  clueFields = getAvailableClueFields(answer);
-  maxClues = clueFields.length;
+function formatDateValue(puzzleDay) {
+  return new Date(puzzleDay * millisecondsPerDay).toISOString().slice(0, 10);
 }
 
-window.addEventListener("storage", (event) => {
-  if (event.key !== schedule.storageKey || !rappers.length) {
+function updateArchiveNavigation() {
+  const day = archiveDate.valueAsNumber / millisecondsPerDay;
+  const yesterday = schedule.getEasternStandardPuzzleDay() - 1;
+  const validDay = Number.isInteger(day) && day >= schedule.firstPuzzleDay && day <= yesterday;
+
+  previousDayBtn.disabled = !validDay || day <= schedule.firstPuzzleDay;
+  nextDayBtn.disabled = !validDay || day >= yesterday;
+}
+
+function renderPuzzleNavigation() {
+  const today = schedule.getEasternStandardPuzzleDay();
+  const label = archivedPuzzleDay === null ? "Today" : "Archive";
+  const dateLabel = new Date(activePuzzleDay * millisecondsPerDay).toLocaleDateString(undefined, {
+    timeZone: "UTC",
+    dateStyle: "medium",
+  });
+
+  puzzleDate.textContent = `${label} · ${dateLabel}`;
+  todayBtn.hidden = archivedPuzzleDay === null;
+  archiveBtn.disabled = today <= schedule.firstPuzzleDay;
+  archiveDate.min = formatDateValue(schedule.firstPuzzleDay);
+  archiveDate.max = formatDateValue(today - 1);
+  archiveDate.value = formatDateValue(archivedPuzzleDay ?? today - 1);
+  updateArchiveNavigation();
+}
+
+function setDailyRapper() {
+  activePuzzleDay = archivedPuzzleDay ?? schedule.getEasternStandardPuzzleDay();
+  answer = schedule.selectDailyRapper(
+    rappers,
+    new Date(activePuzzleDay * millisecondsPerDay + easternStandardOffsetMilliseconds)
+  );
+  clueFields = getAvailableClueFields(answer);
+  maxClues = clueFields.length;
+  renderPuzzleNavigation();
+}
+
+function saveGameProgress() {
+  if (!answer) {
     return;
   }
 
-  setDailyRapper();
+  gameProgress.set(activePuzzleDay, {
+    answerId: answer.id,
+    revealedClues,
+    guesses: [...guesses],
+    gameOver,
+    feedbackMessage: feedback.textContent,
+  });
+}
+
+function restoreGameProgress() {
+  const saved = gameProgress.get(activePuzzleDay);
   resetGame();
+
+  if (!saved || saved.answerId !== answer.id) {
+    return;
+  }
+
+  revealedClues = saved.revealedClues;
+  guesses = [...saved.guesses];
+  renderClues();
+  renderHistory();
+
+  if (saved.gameOver) {
+    endGame(guesses.includes(answer.name));
+  } else {
+    giveUpBtn.hidden = revealedClues < maxClues;
+    setFeedback(saved.feedbackMessage);
+  }
+}
+
+function selectPuzzleDay(puzzleDay) {
+  if (
+    puzzleDay !== null &&
+    (!Number.isInteger(puzzleDay) ||
+      puzzleDay < schedule.firstPuzzleDay ||
+      puzzleDay >= schedule.getEasternStandardPuzzleDay())
+  ) {
+    return;
+  }
+
+  saveGameProgress();
+  archivedPuzzleDay = puzzleDay;
+  setDailyRapper();
+  restoreGameProgress();
+}
+
+window.addEventListener("storage", (event) => {
+  if ((event.key !== schedule.storageKey && event.key !== null) || !rappers.length) {
+    return;
+  }
+
+  saveGameProgress();
+  setDailyRapper();
+  restoreGameProgress();
 });
 
 function scheduleDailyReset() {
@@ -149,8 +250,11 @@ function scheduleDailyReset() {
   }
 
   dailyResetTimer = setTimeout(() => {
-    setDailyRapper();
-    resetGame();
+    if (archivedPuzzleDay === null) {
+      selectPuzzleDay(null);
+    } else {
+      renderPuzzleNavigation();
+    }
     scheduleDailyReset();
   }, getNextEasternStandardResetDelay() + 1000);
 }
@@ -272,6 +376,7 @@ function resetGame() {
   input.disabled = false;
   form.querySelector("button").disabled = false;
   input.value = "";
+  closeSuggestions();
   renderClues();
   renderHistory();
   setFeedback("Make a guess to unlock the next clue.");
@@ -369,6 +474,40 @@ form.addEventListener("submit", (event) => {
 
 giveUpBtn.addEventListener("click", () => {
   endGame(false);
+});
+
+archiveBtn.addEventListener("click", () => {
+  archivePanel.hidden = !archivePanel.hidden;
+  archiveBtn.setAttribute("aria-expanded", String(!archivePanel.hidden));
+
+  if (!archivePanel.hidden) {
+    renderPuzzleNavigation();
+    archiveDate.focus();
+  }
+});
+
+archiveDate.addEventListener("input", updateArchiveNavigation);
+
+archiveForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  if (archiveDate.reportValidity()) {
+    selectPuzzleDay(archiveDate.valueAsNumber / millisecondsPerDay);
+  }
+});
+
+previousDayBtn.addEventListener("click", () => {
+  selectPuzzleDay(archiveDate.valueAsNumber / millisecondsPerDay - 1);
+});
+
+nextDayBtn.addEventListener("click", () => {
+  selectPuzzleDay(archiveDate.valueAsNumber / millisecondsPerDay + 1);
+});
+
+todayBtn.addEventListener("click", () => {
+  selectPuzzleDay(null);
+  archivePanel.hidden = true;
+  archiveBtn.setAttribute("aria-expanded", "false");
 });
 
 async function loadRappers() {

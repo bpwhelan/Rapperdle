@@ -150,6 +150,7 @@
 
   window.RapperdleSchedule = {
     clearDailyOverride,
+    firstPuzzleDay,
     getEasternStandardPuzzleDay,
     readDailyOverride,
     saveDailyOverride,

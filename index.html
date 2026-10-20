@@ -26,6 +26,34 @@
           </div>
         </div>
 
+        <div class="puzzle-bar">
+          <p class="puzzle-date" id="puzzle-date" aria-live="polite">Today's game</p>
+          <div class="puzzle-actions">
+            <button type="button" class="quiet-button" id="today-btn" hidden>Back to today</button>
+            <button
+              type="button"
+              class="quiet-button"
+              id="archive-btn"
+              aria-expanded="false"
+              aria-controls="archive-panel"
+              disabled
+            >Archive</button>
+          </div>
+        </div>
+
+        <section class="archive-panel" id="archive-panel" aria-label="Game archive" hidden>
+          <form id="archive-form">
+            <label for="archive-date">Play a past game</label>
+            <div class="archive-controls">
+              <button type="button" class="quiet-button" id="previous-day-btn" aria-label="Previous archived day">&larr;</button>
+              <input type="date" id="archive-date" name="date" required aria-describedby="archive-hint" />
+              <button type="button" class="quiet-button" id="next-day-btn" aria-label="Next archived day">&rarr;</button>
+              <button type="submit" class="archive-play">Play</button>
+            </div>
+            <p class="archive-hint" id="archive-hint">Choose any previous day. New games start at midnight EST.</p>
+          </form>
+        </section>
+
         <div class="turntable" aria-hidden="true">
           <div class="record">
             <div class="record-ring"></div>
