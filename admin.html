@@ -20,7 +20,7 @@
           <p class="eyebrow">roster control room</p>
           <h1>Rapperdle admin</h1>
           <p class="admin-intro">
-            Manage the playable roster, inspect data health, and adjust the next daily answers.
+            Manage the playable roster, inspect data health, and browse past and upcoming answers.
           </p>
         </div>
         <nav class="admin-nav" aria-label="Admin navigation">
@@ -62,13 +62,25 @@
           <header class="panel-header">
             <div>
               <p class="panel-kicker">Daily control</p>
-              <h2 id="schedule-title">Upcoming answers</h2>
+              <h2 id="schedule-title">Daily answers</h2>
               <p class="panel-description" id="schedule-description">
-                The deterministic answer order for the next two weeks.
+                Browse past and upcoming answers. Games reset at midnight EST.
               </p>
             </div>
-            <span class="panel-tag">Next 14 days</span>
+            <span class="panel-tag">14 days</span>
           </header>
+          <div class="schedule-controls">
+            <label class="search-control schedule-date-control" for="schedule-start-date">
+              <span>Start date</span>
+              <input id="schedule-start-date" type="date" required disabled aria-describedby="schedule-range" />
+            </label>
+            <div class="schedule-buttons" role="group" aria-label="Browse daily answers">
+              <button class="quiet-button" id="previous-schedule" type="button" disabled>← Previous 14 days</button>
+              <button class="quiet-button" id="schedule-today" type="button" disabled>Back to today</button>
+              <button class="quiet-button" id="next-schedule" type="button" disabled>Next 14 days →</button>
+            </div>
+          </div>
+          <p class="schedule-range" id="schedule-range" role="status" aria-live="polite" aria-atomic="true"></p>
           <div class="override-status" id="override-status" role="status" aria-live="polite" hidden>
             <span id="override-status-message"></span>
             <button class="quiet-button" id="clear-daily-override" type="button">Clear override</button>

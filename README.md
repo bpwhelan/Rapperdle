@@ -18,7 +18,9 @@ The archive starts January 1, 2026 and follows the same midnight EST schedule an
 
 ## Admin Dashboard
 
-Open [`/admin.html`](admin.html) for the roster dashboard. It includes roster health checks, searchable active/disabled records, the next 14 daily answers, and a “Make today” button for playable rappers. The selected override and shifted schedule are saved in browser storage, so they apply to you and friends using that same browser profile.
+Open [`/admin.html`](admin.html) for the roster dashboard. It includes roster health checks, searchable active/disabled records, and a daily answer schedule. Use **Previous 14 days** and **Next 14 days** to browse, choose a **Start date** to jump to any day from January 1, 2026, or select **Back to today** for the next 14 answers. Past answers use the same current roster and browser-local override as the game archive.
+
+The “Make today” button for playable rappers sets today's answer. The selected override and shifted schedule are saved in browser storage, so they apply to you and friends using that same browser profile.
 
 ## Deploy To Vercel
 

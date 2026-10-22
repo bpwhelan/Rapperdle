@@ -1,6 +1,7 @@
 const dataUrl = "rappers.json";
 const millisecondsPerDay = 24 * 60 * 60 * 1000;
 const schedule = window.RapperdleSchedule;
+const schedulePageSize = 14;
 const baseClueFields = [
   ["Age / Status / Gender", "ageStatus", true],
   ["Hometown", "hometown"],
@@ -17,6 +18,11 @@ const elements = {
   totalCount: document.querySelector("#total-count"),
   countryCount: document.querySelector("#country-count"),
   upcomingBody: document.querySelector("#upcoming-body"),
+  scheduleStartDate: document.querySelector("#schedule-start-date"),
+  previousSchedule: document.querySelector("#previous-schedule"),
+  scheduleToday: document.querySelector("#schedule-today"),
+  nextSchedule: document.querySelector("#next-schedule"),
+  scheduleRange: document.querySelector("#schedule-range"),
   overrideStatus: document.querySelector("#override-status"),
   overrideStatusMessage: document.querySelector("#override-status-message"),
   clearDailyOverride: document.querySelector("#clear-daily-override"),
@@ -35,6 +41,7 @@ let roster = [];
 let activeRappers = [];
 let disabledIds = new Set();
 let rosterData = null;
+let scheduleStartDay = null;
 
 function normalize(value) {
   return String(value ?? "")
@@ -231,9 +238,20 @@ function renderSchedule() {
   clearElement(elements.upcomingBody);
 
   const todayPuzzleDay = schedule.getEasternStandardPuzzleDay();
+  scheduleStartDay ??= todayPuzzleDay;
+  elements.scheduleStartDate.min = new Date(schedule.firstPuzzleDay * millisecondsPerDay)
+    .toISOString().slice(0, 10);
+  elements.scheduleStartDate.value = new Date(scheduleStartDay * millisecondsPerDay)
+    .toISOString().slice(0, 10);
+  elements.scheduleStartDate.disabled = false;
+  elements.previousSchedule.disabled = scheduleStartDay <= schedule.firstPuzzleDay;
+  elements.scheduleToday.disabled = scheduleStartDay === todayPuzzleDay;
+  elements.nextSchedule.disabled = false;
+  elements.scheduleRange.textContent =
+    `${formatPuzzleDate(scheduleStartDay)} – ${formatPuzzleDate(scheduleStartDay + schedulePageSize - 1)}`;
 
-  for (let index = 0; index < 14; index += 1) {
-    const puzzleDay = todayPuzzleDay + index;
+  for (let index = 0; index < schedulePageSize; index += 1) {
+    const puzzleDay = scheduleStartDay + index;
     const answer = schedule.selectDailyRapper(
       activeRappers,
       new Date(puzzleDay * millisecondsPerDay + 12 * 60 * 60 * 1000)
@@ -251,8 +269,13 @@ function renderSchedule() {
     date.textContent = formatPuzzleDate(puzzleDay);
 
     const dayLabel = document.createElement("small");
-    dayLabel.textContent = index === 0 ? "Today" : index === 1 ? "Tomorrow" : "Puzzle day " + (index + 1);
-    if (index < 2) {
+    const dayOffset = puzzleDay - todayPuzzleDay;
+    dayLabel.textContent = dayOffset === 0 ? "Today"
+      : dayOffset === -1 ? "Yesterday"
+      : dayOffset === 1 ? "Tomorrow"
+      : dayOffset < 0 ? `${-dayOffset} days ago`
+      : `In ${dayOffset} days`;
+    if (dayOffset === 0 || dayOffset === 1) {
       dayLabel.className = "today-label";
     }
 
@@ -267,6 +290,15 @@ function renderSchedule() {
   }
 
   renderOverrideStatus();
+}
+
+function selectScheduleStartDay(puzzleDay) {
+  if (!activeRappers.length || !Number.isInteger(puzzleDay) || puzzleDay < schedule.firstPuzzleDay) {
+    return;
+  }
+
+  scheduleStartDay = puzzleDay;
+  renderSchedule();
 }
 
 function matchesRosterFilter(rapper, query, status) {
@@ -412,6 +444,24 @@ function showError(error) {
 
 elements.rosterSearch.addEventListener("input", renderRoster);
 elements.statusFilter.addEventListener("change", renderRoster);
+
+elements.scheduleStartDate.addEventListener("change", () => {
+  if (elements.scheduleStartDate.reportValidity()) {
+    selectScheduleStartDay(elements.scheduleStartDate.valueAsNumber / millisecondsPerDay);
+  }
+});
+
+elements.previousSchedule.addEventListener("click", () => {
+  selectScheduleStartDay(Math.max(schedule.firstPuzzleDay, scheduleStartDay - schedulePageSize));
+});
+
+elements.nextSchedule.addEventListener("click", () => {
+  selectScheduleStartDay(scheduleStartDay + schedulePageSize);
+});
+
+elements.scheduleToday.addEventListener("click", () => {
+  selectScheduleStartDay(schedule.getEasternStandardPuzzleDay());
+});
 elements.clearFilters.addEventListener("click", () => {
   elements.rosterSearch.value = "";
   elements.statusFilter.value = "all";
