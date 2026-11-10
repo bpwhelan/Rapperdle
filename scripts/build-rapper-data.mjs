@@ -1,4 +1,6 @@
 import { readFile, writeFile } from "node:fs/promises";
+import { albumRevealsArtist, normalizeTitle, selectAlbumClues } from "./album-clues.mjs";
+import { validateRoster } from "./validate-roster.mjs";
 
 const USER_AGENT = "RapperleDataBuilder/1.0 (local project; data refresh script)";
 const TODAY = new Date("2026-05-09T00:00:00Z");
@@ -201,12 +203,6 @@ function genderCode(gender) {
   return gender.slice(0, 1).toUpperCase();
 }
 
-function cleanAlbumTitle(title) {
-  return String(title ?? "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 async function searchArtists() {
   const artists = new Map();
 
@@ -245,7 +241,7 @@ async function searchArtists() {
   return [...artists.values()].sort((left, right) => right.score - left.score || left.name.localeCompare(right.name));
 }
 
-async function getAlbums(artistId) {
+async function getAlbums(artistId, artist) {
   const releaseGroups = [];
   let offset = 0;
 
@@ -253,7 +249,6 @@ async function getAlbums(artistId) {
     const data = await fetchJson(
       musicBrainzUrl("release-group", {
         artist: artistId,
-        type: "album",
         limit: "100",
         offset: String(offset),
       }),
@@ -266,19 +261,9 @@ async function getAlbums(artistId) {
     if (offset >= (data["release-group-count"] ?? 0)) {
       break;
     }
-  } while (offset < 300);
+  } while (true);
 
-  return releaseGroups
-    .filter((group) => group["primary-type"] === "Album")
-    .filter((group) => !(group["secondary-types"] ?? []).length)
-    .filter((group) => group.title && group["first-release-date"])
-    .sort((left, right) => {
-      const dateSort = left["first-release-date"].localeCompare(right["first-release-date"]);
-      return dateSort || left.title.localeCompare(right.title);
-    })
-    .map((group) => cleanAlbumTitle(group.title))
-    .filter((title, index, all) => all.findIndex((candidate) => normalize(candidate) === normalize(title)) === index)
-    .slice(0, 2);
+  return selectAlbumClues(releaseGroups, artist).slice(0, 2);
 }
 
 async function readExistingRoster() {
@@ -294,13 +279,25 @@ async function readExistingRoster() {
 }
 
 async function main() {
+  const previousData = await readExistingRoster();
+  const previousRappers = Array.isArray(previousData?.rappers) ? previousData.rappers : [];
+  const previousById = new Map(previousRappers.map((rapper) => [rapper.id, rapper]));
   const artists = await searchArtists();
   console.log(`Candidate artists with required facts: ${artists.length}`);
 
   const rappers = [];
 
   for (const [index, artist] of artists.entries()) {
-    const albums = await getAlbums(artist.id);
+    const previousRapper = previousById.get(slugify(artist.name));
+    const aliases = [...new Set([
+      ...usefulAliases(artist.name, artist),
+      ...(previousRapper?.aliases ?? []),
+    ])];
+    const clueArtist = { name: artist.name, aliases };
+    const curatedAlbums = [previousRapper?.albumOne, previousRapper?.albumTwo];
+    const hasSafeCuratedAlbums = curatedAlbums.every((title) => title?.trim() && !albumRevealsArtist(title, clueArtist))
+      && normalizeTitle(curatedAlbums[0]) !== normalizeTitle(curatedAlbums[1]);
+    const albums = hasSafeCuratedAlbums ? curatedAlbums : await getAlbums(artist.id, clueArtist);
 
     if (albums.length < 2) {
       continue;
@@ -312,7 +309,7 @@ async function main() {
     const entry = {
       id: slugify(artist.name),
       name: artist.name,
-      aliases: usefulAliases(artist.name, artist),
+      aliases,
       birthDate,
       ...(deathDate ? { deathDate } : {}),
       ageStatus: `${ageOn(birthDate, deathDate)} (${deathDate ? "Deceased" : "Alive"})`,
@@ -324,6 +321,8 @@ async function main() {
       firstLetter: artist.name.slice(0, 1).toUpperCase(),
       sources: {
         musicBrainz: `https://musicbrainz.org/artist/${artist.id}`,
+        ...(hasSafeCuratedAlbums && previousRapper.sources?.albumClues
+          ? { albumClues: previousRapper.sources.albumClues } : {}),
       },
     };
 
@@ -348,8 +347,6 @@ async function main() {
       return { ...rapper, id: revisedId };
     });
 
-  const previousData = await readExistingRoster();
-  const previousRappers = Array.isArray(previousData?.rappers) ? previousData.rappers : [];
   const generatedById = new Map(uniqueRappers.map((rapper) => [rapper.id, rapper]));
   const mergedRappers = [];
   const seenIds = new Set();
@@ -385,6 +382,7 @@ async function main() {
     rappers: mergedRappers,
   };
 
+  validateRoster(output);
   await writeFile("rappers.json", `${JSON.stringify(output, null, 2)}\n`);
   console.log(`Wrote rappers.json with ${mergedRappers.length} rappers`);
 }

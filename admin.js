@@ -5,8 +5,8 @@ const schedulePageSize = 14;
 const baseClueFields = [
   ["Age / Status / Gender", "ageStatus", true],
   ["Hometown", "hometown"],
-  ["Album", "albumOne"],
-  ["Album", "albumTwo"],
+  ["Release", "albumOne"],
+  ["Release", "albumTwo"],
   ["Signature Clue", "signature", false],
 ];
 

@@ -132,11 +132,14 @@
       "hometown": "Augusta",
       "country": "United States",
       "gender": "M",
-      "albumOne": "12 Gauge",
+      "albumOne": "Freaky One",
       "albumTwo": "Let Me Ride Again",
       "firstLetter": "1",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/2a45629f-d6fc-4be0-8f5b-b7f168618379"
+        "musicBrainz": "https://musicbrainz.org/artist/2a45629f-d6fc-4be0-8f5b-b7f168618379",
+        "albumClues": {
+          "albumOne": "https://www.qobuz.com/us-en/interpreter/12-gauge/840942"
+        }
       }
     },
     {
@@ -218,11 +221,14 @@
       "hometown": "East Harlem",
       "country": "United States",
       "gender": "M",
-      "albumOne": "2Pacalypse Now",
+      "albumOne": "Me Against the World",
       "albumTwo": "Troublesome 21",
       "firstLetter": "2",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2"
+        "musicBrainz": "https://musicbrainz.org/artist/382f1005-e9ab-4684-afd4-0bdae4ee37f2",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/cfc98a2a-6aaa-3dda-a01d-e034e56c4fec"
+        }
       }
     },
     {
@@ -290,10 +296,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Lost",
-      "albumTwo": "8 Ball Presents The Slab",
+      "albumTwo": "Almost Famous",
       "firstLetter": "8",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/89c20fbe-42ad-4b52-85c3-d18fc5686717"
+        "musicBrainz": "https://musicbrainz.org/artist/89c20fbe-42ad-4b52-85c3-d18fc5686717",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/d6488f8a-001f-3995-b3c4-e64796fa3fb7"
+        }
       }
     },
     {
@@ -433,10 +442,13 @@
       "country": "United Kingdom",
       "gender": "F",
       "albumOne": "Fired Up",
-      "albumTwo": "The Alesha Show",
+      "albumTwo": "The Entertainer",
       "firstLetter": "A",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/b54a3b47-8f52-46fd-85f2-49165ea437b8"
+        "musicBrainz": "https://musicbrainz.org/artist/b54a3b47-8f52-46fd-85f2-49165ea437b8",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/93cdb48f-7fcc-4cb0-9106-1f9a84ab4db0"
+        }
       }
     },
     {
@@ -635,18 +647,23 @@
       "name": "B.o.B",
       "aliases": [
         "Bobby Ray Simmons, Jr.",
-        "B. Simmons Jr."
+        "B. Simmons Jr.",
+        "Bobby Ray"
       ],
       "birthDate": "1988-11-15",
       "ageStatus": "37 (Alive)",
       "hometown": "Winston-Salem",
       "country": "United States",
       "gender": "M",
-      "albumOne": "B.o.B. Vs. Bobby Ray",
-      "albumTwo": "B.o.B Presents: The Adventures of Bobby Ray",
+      "albumOne": "Strange Clouds",
+      "albumTwo": "Underground Luxury",
       "firstLetter": "B",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/94c338ff-1985-4429-9dc8-997b61bb5932"
+        "musicBrainz": "https://musicbrainz.org/artist/94c338ff-1985-4429-9dc8-997b61bb5932",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/5f70eff9-0faf-4df4-a6a5-e843fec74cea",
+          "albumTwo": "https://musicbrainz.org/release-group/a7b94901-96ba-4b17-a832-c921e3f19c12"
+        }
       }
     },
     {
@@ -766,10 +783,13 @@
       "country": "United States",
       "gender": "F",
       "albumOne": "REALLY HER",
-      "albumTwo": "BIANCA",
+      "albumTwo": "FOR CERTAIN",
       "firstLetter": "B",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/2c3ddff8-0de5-412a-8f0c-8925f84d5a9a"
+        "musicBrainz": "https://musicbrainz.org/artist/2c3ddff8-0de5-412a-8f0c-8925f84d5a9a",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/7808f16c-5e07-441c-9b98-e0026ecc32bd"
+        }
       }
     },
     {
@@ -941,11 +961,14 @@
       "hometown": "New Orleans",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Birdman",
+      "albumOne": "5 * Stunna",
       "albumTwo": "Fast Money",
       "firstLetter": "B",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/dcf5807c-ef1f-4291-b452-6824080ecac4"
+        "musicBrainz": "https://musicbrainz.org/artist/dcf5807c-ef1f-4291-b452-6824080ecac4",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/c29659ca-ac18-32da-a1d7-36412ec3f211"
+        }
       }
     },
     {
@@ -987,10 +1010,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Hannicap Circus",
-      "albumTwo": "Bizarre’s World",
+      "albumTwo": "Blue Cheese & Coney Island",
       "firstLetter": "B",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/2ddb0e05-e6b2-4c6b-b2d4-08a20c1a0d1d"
+        "musicBrainz": "https://musicbrainz.org/artist/2ddb0e05-e6b2-4c6b-b2d4-08a20c1a0d1d",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/e5217d39-83f8-3cf1-8ee5-87138c3eee0e"
+        }
       }
     },
     {
@@ -1454,11 +1480,15 @@
       "hometown": "Kingston",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Can‐I‐Bus",
-      "albumTwo": "2000 B.C. (Before Can-I-Bus)",
+      "albumOne": "C True Hollywood Stories",
+      "albumTwo": "Rip the Jacker",
       "firstLetter": "C",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/3f09f9d0-a88a-41a0-8cd8-a6dbcff2c50d"
+        "musicBrainz": "https://musicbrainz.org/artist/3f09f9d0-a88a-41a0-8cd8-a6dbcff2c50d",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/91ed997a-00a4-3ff8-a6ba-2a7a733094a1",
+          "albumTwo": "https://musicbrainz.org/release-group/cee2a4a3-095c-31d4-aecc-053b47897c88"
+        }
       }
     },
     {
@@ -1615,11 +1645,14 @@
       "hometown": "Tottenham",
       "country": "United Kingdom",
       "gender": "M",
-      "albumOne": "I Am Chipmunk",
+      "albumOne": "Transition",
       "albumTwo": "More Fun! The Mixtape",
       "firstLetter": "C",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/8ec6bf47-d22f-4a2f-b930-0f7feb10ea3f"
+        "musicBrainz": "https://musicbrainz.org/artist/8ec6bf47-d22f-4a2f-b930-0f7feb10ea3f",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/8df4b97b-1342-423e-ab24-1f621df01add"
+        }
       }
     },
     {
@@ -1633,11 +1666,14 @@
       "hometown": "New Orleans",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Choppa Style",
+      "albumOne": "Comin’ Back Home",
       "albumTwo": "Straight From the N.O.",
       "firstLetter": "C",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/1eecb620-3a36-417e-af65-f74789412ccf"
+        "musicBrainz": "https://musicbrainz.org/artist/1eecb620-3a36-417e-af65-f74789412ccf",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b5a40632-5dca-4dfc-adda-64e978b2be0e"
+        }
       }
     },
     {
@@ -1669,11 +1705,14 @@
       "hometown": "Queens",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Autobiography of Mistachuck",
+      "albumOne": "The Black in Man",
       "albumTwo": "Don’t Rhyme for the Sake of Riddlin’",
       "firstLetter": "C",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/88633ac3-c8e2-420f-8415-77ac56b3105f"
+        "musicBrainz": "https://musicbrainz.org/artist/88633ac3-c8e2-420f-8415-77ac56b3105f",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/02497f65-8559-4115-ba96-e8749ef899e3"
+        }
       }
     },
     {
@@ -1711,17 +1750,22 @@
     {
       "id": "coi-leray",
       "name": "Coi Leray",
-      "aliases": [],
+      "aliases": [
+        "Coi"
+      ],
       "birthDate": "1997-05-11",
       "ageStatus": "28 (Alive)",
       "hometown": "New Jersey",
       "country": "United States",
       "gender": "F",
       "albumOne": "Trendsetter",
-      "albumTwo": "COI",
+      "albumTwo": "Now or Never",
       "firstLetter": "C",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/e1115c6a-6705-4d17-bbf2-0efd2ef1bbb2"
+        "musicBrainz": "https://musicbrainz.org/artist/e1115c6a-6705-4d17-bbf2-0efd2ef1bbb2",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/b6d59ed1-4478-4173-a73f-b207c5be98fc"
+        }
       }
     },
     {
@@ -2233,7 +2277,8 @@
         "David Blake",
         "D. Blake",
         "Dante Blake",
-        "DJ Quick"
+        "DJ Quick",
+        "Quik"
       ],
       "birthDate": "1970-01-18",
       "ageStatus": "56 (Alive)",
@@ -2241,10 +2286,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "The Red Tape",
-      "albumTwo": "Quik Is the Name",
+      "albumTwo": "Safe + Sound",
       "firstLetter": "D",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/542f4f08-4d8f-48db-a414-d3a33a62929f"
+        "musicBrainz": "https://musicbrainz.org/artist/542f4f08-4d8f-48db-a414-d3a33a62929f",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/29d20149-4313-35c8-8292-3e5bad19df22"
+        }
       }
     },
     {
@@ -2419,7 +2467,8 @@
         "E. Wright",
         "Eric Wright",
         "Eric Lynn Wright",
-        "Eazy-Motherfuckin'-E"
+        "Eazy-Motherfuckin'-E",
+        "Eazy"
       ],
       "birthDate": "1964-09-07",
       "deathDate": "1995-03-26",
@@ -2427,11 +2476,14 @@
       "hometown": "Compton",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Eazy‐Duz‐It",
+      "albumOne": "It’s On (Dr. Dre) 187um Killa",
       "albumTwo": "Str8 off tha Streetz of Muthaphukkin’ Compton",
       "firstLetter": "E",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/c3009d7a-51ac-4c9c-888a-04f5c3c4be0c"
+        "musicBrainz": "https://musicbrainz.org/artist/c3009d7a-51ac-4c9c-888a-04f5c3c4be0c",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/2f63eb24-7fde-3123-9b83-d5eaa38339df"
+        }
       }
     },
     {
@@ -2555,11 +2607,14 @@
       "hometown": "Philadelphia",
       "country": "United States",
       "gender": "F",
-      "albumOne": "Let There Be… Eve – Ruff Ryders’ First Lady",
+      "albumOne": "Lip Lock",
       "albumTwo": "Scorpion",
       "firstLetter": "E",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/1ac10f5e-2079-4435-b78f-dda6ecdeba15"
+        "musicBrainz": "https://musicbrainz.org/artist/1ac10f5e-2079-4435-b78f-dda6ecdeba15",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/573ce756-35e5-412c-b8c9-29497f76c9c8"
+        }
       }
     },
     {
@@ -2571,11 +2626,14 @@
       "hometown": "Valley Stream",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Forever Everlasting",
+      "albumOne": "Eat at Whitey’s",
       "albumTwo": "Whitey Ford Sings the Blues",
       "firstLetter": "E",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/ca39d50f-9885-420e-88d6-9c3f64038773"
+        "musicBrainz": "https://musicbrainz.org/artist/ca39d50f-9885-420e-88d6-9c3f64038773",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/3c6a0644-1f27-38cc-a4d6-2d1a06ea486b"
+        }
       }
     },
     {
@@ -2612,11 +2670,14 @@
       "hometown": "Brooklyn",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Ghetto Fabolous",
+      "albumOne": "Real Talk",
       "albumTwo": "Street Dreams",
       "firstLetter": "F",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/d2299099-e617-46dd-b013-ba0b4c72bc63"
+        "musicBrainz": "https://musicbrainz.org/artist/d2299099-e617-46dd-b013-ba0b4c72bc63",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/9accff69-6e19-32f8-ace9-80be568be239"
+        }
       }
     },
     {
@@ -2672,11 +2733,14 @@
       "hometown": "Paterson",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Fetty Wap",
+      "albumOne": "The Butterfly Effect",
       "albumTwo": "For My Fans III: The Final Chapter",
       "firstLetter": "F",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/e3492ea0-5997-4241-a7bf-2fd7fb1bfad1"
+        "musicBrainz": "https://musicbrainz.org/artist/e3492ea0-5997-4241-a7bf-2fd7fb1bfad1",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/30c9aa66-073a-461c-873d-4aa718835916"
+        }
       }
     },
     {
@@ -2767,11 +2831,14 @@
       "hometown": "North Philadelphia",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Philadelphia Freeway",
+      "albumOne": "The Stimulus Package",
       "albumTwo": "Free at Last",
       "firstLetter": "F",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/5d008bf9-2958-4640-a5de-dcdcebe711a4"
+        "musicBrainz": "https://musicbrainz.org/artist/5d008bf9-2958-4640-a5de-dcdcebe711a4",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/0ce34404-5ab5-4147-aacb-b94f596b489f"
+        }
       }
     },
     {
@@ -2885,10 +2952,13 @@
       "country": "United Kingdom",
       "gender": "M",
       "albumOne": "Rebel With a Cause",
-      "albumTwo": "Momentum 2 (The Return of Ghetto)",
+      "albumTwo": "Conflict of Interest",
       "firstLetter": "G",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/62ffd9ee-13a1-49ed-8721-d07fd0b2f07d"
+        "musicBrainz": "https://musicbrainz.org/artist/62ffd9ee-13a1-49ed-8721-d07fd0b2f07d",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/aa0b4503-8225-40cc-b638-65656ceed7f6"
+        }
       }
     },
     {
@@ -2910,10 +2980,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Ironman",
-      "albumTwo": "Ghostface Meets MF: Operation Ironman",
+      "albumTwo": "Supreme Clientele",
       "firstLetter": "G",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/3b39abeb-0064-4eed-9ddd-ee47a45c54cb"
+        "musicBrainz": "https://musicbrainz.org/artist/3b39abeb-0064-4eed-9ddd-ee47a45c54cb",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/e54744e2-7646-304d-abb8-2952671da3bb"
+        }
       }
     },
     {
@@ -2997,11 +3070,15 @@
       "hometown": "Boston",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Jazzmatazz, Volume 1",
-      "albumTwo": "Jazzmatazz Volume II: The New Reality",
+      "albumOne": "Version 7.0: The Street Scriptures",
+      "albumTwo": "The 8.0 Lost And Found EP",
       "firstLetter": "G",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/215c6ab2-7888-4061-bd56-9fb650328106"
+        "musicBrainz": "https://musicbrainz.org/artist/215c6ab2-7888-4061-bd56-9fb650328106",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/62968cfa-2394-3051-9604-b7f641209be0",
+          "albumTwo": "https://musicbrainz.org/release-group/6f9fdb0b-4b9f-4cf3-adc1-ebb625d8e783"
+        }
       }
     },
     {
@@ -3021,11 +3098,14 @@
       "hometown": "Brooklyn",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Words From the Genius",
+      "albumOne": "Beneath the Surface",
       "albumTwo": "Liquid Swords",
       "firstLetter": "G",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/550cb78b-4995-4873-baea-76ef265531f5"
+        "musicBrainz": "https://musicbrainz.org/artist/550cb78b-4995-4873-baea-76ef265531f5",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/9abd4b38-1c2c-3656-bcec-8a22b62eba65"
+        }
       }
     },
     {
@@ -3141,10 +3221,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "In the Line of Fire",
-      "albumTwo": "Fatal",
+      "albumTwo": "Born Legendary",
       "firstLetter": "H",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/2e15d1cb-8087-40b1-997c-51aaa497d4c5"
+        "musicBrainz": "https://musicbrainz.org/artist/2e15d1cb-8087-40b1-997c-51aaa497d4c5",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/96149325-d640-4d53-83ce-9a4ce032a954"
+        }
       }
     },
     {
@@ -3266,10 +3349,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Welcome 2 Detroit",
-      "albumTwo": "The Official Jay Dee Instrumental Series, Volume 1: Unreleased",
+      "albumTwo": "Donuts",
       "firstLetter": "J",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/cbcbb22c-3a8d-46af-b4ba-09c98f0d7931"
+        "musicBrainz": "https://musicbrainz.org/artist/cbcbb22c-3a8d-46af-b4ba-09c98f0d7931",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/6b78c33a-64c4-3472-99e9-be45a392acb4"
+        }
       }
     },
     {
@@ -3434,11 +3520,15 @@
       "hometown": "Yonkers",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Kiss tha Game Goodbye",
-      "albumTwo": "Kiss of Death",
+      "albumOne": "Top 5 Dead or Alive",
+      "albumTwo": "Ignatius",
       "firstLetter": "J",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/83735edd-f2a3-41d0-a31d-652bc3cadb3e"
+        "musicBrainz": "https://musicbrainz.org/artist/83735edd-f2a3-41d0-a31d-652bc3cadb3e",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/a8fe72f9-958b-46c0-8dfb-99a76bbd79fd",
+          "albumTwo": "https://musicbrainz.org/release-group/d7aca2e8-94f8-4cc9-856f-2bb88df0c2fb"
+        }
       }
     },
     {
@@ -3686,11 +3776,14 @@
       "hometown": "Manhattan",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Joe Budden",
+      "albumOne": "Padded Room",
       "albumTwo": "The Album Before The Album",
       "firstLetter": "J",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/02e81a75-461f-4b9d-b635-9cc916cef9c0"
+        "musicBrainz": "https://musicbrainz.org/artist/02e81a75-461f-4b9d-b635-9cc916cef9c0",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/244f04b0-0f22-4f7e-a9c8-2efd1235f417"
+        }
       }
     },
     {
@@ -4316,10 +4409,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Return of the Boom Bap",
-      "albumTwo": "KRS‐ONE",
+      "albumTwo": "I Got Next",
       "firstLetter": "K",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/fc4568b6-cbe3-4a3d-8409-28510c19e3e2"
+        "musicBrainz": "https://musicbrainz.org/artist/fc4568b6-cbe3-4a3d-8409-28510c19e3e2",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/b6787784-634c-3486-af38-e8caa880fa5e"
+        }
       }
     },
     {
@@ -4360,11 +4456,14 @@
       "hometown": "Philadelphia",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Kuruption!",
+      "albumOne": "Space Boogie: Smoke Oddessey",
       "albumTwo": "Tha Streetz Iz a Mutha",
       "firstLetter": "K",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/9034f787-3e79-44fe-89c1-8a082d556eec"
+        "musicBrainz": "https://musicbrainz.org/artist/9034f787-3e79-44fe-89c1-8a082d556eec",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/3ba4dc85-d917-328c-b412-c17460f0ce79"
+        }
       }
     },
     {
@@ -4600,11 +4699,14 @@
       "hometown": "Oakland",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Gnar Lif3",
+      "albumOne": "DIE BOUT IT",
       "albumTwo": "Fire Hazard",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/ac6a425c-35c3-4fd3-bcb6-39075bf2845a"
+        "musicBrainz": "https://musicbrainz.org/artist/ac6a425c-35c3-4fd3-bcb6-39075bf2845a",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/e97ae116-3704-4392-b1b3-a87790a55a78"
+        }
       }
     },
     {
@@ -4641,10 +4743,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Northsbest",
-      "albumTwo": "Lil Mosey",
+      "albumTwo": "Certified Hitmaker",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/330e00e4-7991-4b47-b2be-3881aa5afed6"
+        "musicBrainz": "https://musicbrainz.org/artist/330e00e4-7991-4b47-b2be-3881aa5afed6",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/af899641-e27b-47b6-8acd-2c98314af519"
+        }
       }
     },
     {
@@ -4698,11 +4803,14 @@
       "hometown": "Atlanta",
       "country": "United States",
       "gender": "M",
-      "albumOne": "The King of Crunk & BME Recordings Present: Lil Scrappy & Trillville",
+      "albumOne": "Prince of the South",
       "albumTwo": "Bred 2 Die Born 2 Live",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/77fafce8-a32f-4d42-bdce-266bbf913cee"
+        "musicBrainz": "https://musicbrainz.org/artist/77fafce8-a32f-4d42-bdce-266bbf913cee",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/5f59125c-f811-4565-b318-9264e0f7fe29"
+        }
       }
     },
     {
@@ -4777,11 +4885,14 @@
       "hometown": "Francisville",
       "country": "United States",
       "gender": "N",
-      "albumOne": "Luv Is Rage 2",
+      "albumOne": "Pink Tape",
       "albumTwo": "Eternal Atake",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/8837b875-3689-4646-b3fd-d8b53815c7a8"
+        "musicBrainz": "https://musicbrainz.org/artist/8837b875-3689-4646-b3fd-d8b53815c7a8",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/4fc5b424-43f0-482a-b8ad-948fcfcebb2d"
+        }
       }
     },
     {
@@ -4873,11 +4984,14 @@
       "hometown": "Houston",
       "country": "United States",
       "gender": "M",
-      "albumOne": "The Leprechaun",
+      "albumOne": "U Gotta Feel Me",
       "albumTwo": "Undaground Legend",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/981d39fc-bd00-4cc6-ac67-6410f8b89098"
+        "musicBrainz": "https://musicbrainz.org/artist/981d39fc-bd00-4cc6-ac67-6410f8b89098",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/a9c74b67-c6d0-37b4-aa9a-4eb2c25020aa"
+        }
       }
     },
     {
@@ -4902,17 +5016,22 @@
     {
       "id": "lil-kim",
       "name": "Lil’ Kim",
-      "aliases": [],
+      "aliases": [
+        "Kim"
+      ],
       "birthDate": "1974-07-11",
       "ageStatus": "51 (Alive)",
       "hometown": "Bedford–Stuyvesant",
       "country": "United States",
       "gender": "F",
       "albumOne": "Hard Core",
-      "albumTwo": "The Notorious KIM",
+      "albumTwo": "La Bella Mafia",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/bc1b5c95-e6d6-46b5-957a-5e8908b02c1e"
+        "musicBrainz": "https://musicbrainz.org/artist/bc1b5c95-e6d6-46b5-957a-5e8908b02c1e",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/54401f2a-f149-340b-8655-aad2fa8b3f1f"
+        }
       }
     },
     {
@@ -4944,11 +5063,14 @@
       "hometown": "Detroit",
       "country": "United States",
       "gender": "F",
-      "albumOne": "Lizzobangers",
+      "albumOne": "Cuz I Love You",
       "albumTwo": "Big GRRRL Small World",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/8fb5370b-9568-4b61-9da5-2aa12c9928db"
+        "musicBrainz": "https://musicbrainz.org/artist/8fb5370b-9568-4b61-9da5-2aa12c9928db",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/36d18c36-5d6e-4c57-8736-baa3a778395d"
+        }
       }
     },
     {
@@ -5118,11 +5240,15 @@
       "hometown": "Chicago",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Lupe Fiasco’s Food & Liquor",
-      "albumTwo": "Lupe Fiasco’s The Cool",
+      "albumOne": "Lasers",
+      "albumTwo": "Tetsuo & Youth",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/cf15719f-51f9-4db8-a15d-5eed9664ce69"
+        "musicBrainz": "https://musicbrainz.org/artist/cf15719f-51f9-4db8-a15d-5eed9664ce69",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b6929844-43d3-4cef-a96b-c575dad67153",
+          "albumTwo": "https://musicbrainz.org/release-group/8f121156-7c32-4329-9001-50c8ee1635be"
+        }
       }
     },
     {
@@ -5197,11 +5323,14 @@
       "hometown": "Inglewood",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Mack 10",
+      "albumOne": "The Recipe",
       "albumTwo": "Based on a True Story",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/c3b4e25b-977f-4cb6-96d7-f68afbac732f"
+        "musicBrainz": "https://musicbrainz.org/artist/c3b4e25b-977f-4cb6-96d7-f68afbac732f",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/5bf08bc0-2ba9-3144-beb4-158234dd0e26"
+        }
       }
     },
     {
@@ -5239,11 +5368,15 @@
       "hometown": "Oxnard",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Shades of Blue: Madlib Invades Blue Note",
-      "albumTwo": "Beat Konducta, Volume 1: Movie Scenes",
+      "albumOne": "Liberation",
+      "albumTwo": "WLIB AM: King of the Wigflip",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/ea9078ef-20ca-4506-81ea-2ae5fe3a42e8"
+        "musicBrainz": "https://musicbrainz.org/artist/ea9078ef-20ca-4506-81ea-2ae5fe3a42e8",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b1f29a11-2c78-3dc4-ac93-7cd1af577854",
+          "albumTwo": "https://musicbrainz.org/release-group/3b97af03-e2d5-3847-b1fd-6718619f90e6"
+        }
       }
     },
     {
@@ -5403,11 +5536,14 @@
       "hometown": "Flint",
       "country": "United States",
       "gender": "M",
-      "albumOne": "MC Breed & DFC",
+      "albumOne": "Funkafied",
       "albumTwo": "20 Below",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/c16424b2-0679-4358-89a8-41ae279a7059"
+        "musicBrainz": "https://musicbrainz.org/artist/c16424b2-0679-4358-89a8-41ae279a7059",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/4c083779-bf2e-3883-992d-8b57989c1042"
+        }
       }
     },
     {
@@ -5510,18 +5646,22 @@
       "aliases": [
         "Lana Michelle Moorer",
         "Lana Moorer",
-        "MC Lytro"
+        "MC Lytro",
+        "Lyte"
       ],
       "birthDate": "1970-10-11",
       "ageStatus": "55 (Alive)",
       "hometown": "Brooklyn",
       "country": "United States",
       "gender": "F",
-      "albumOne": "Lyte as a Rock",
+      "albumOne": "Act Like You Know",
       "albumTwo": "Eyes on This",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/fac552dc-55e5-498c-818a-c278f1e02a75"
+        "musicBrainz": "https://musicbrainz.org/artist/fac552dc-55e5-498c-818a-c278f1e02a75",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/a7b6c3d0-fa9e-3a69-bff1-aa428ebf07b2"
+        }
       }
     },
     {
@@ -5644,11 +5784,15 @@
       "hometown": "Hounslow",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Operation: Doomsday",
-      "albumTwo": "Ghostface Meets MF: Operation Ironman",
+      "albumOne": "MM..FOOD",
+      "albumTwo": "Born Like This",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/188711ed-c99b-439c-844a-ca831f63a727"
+        "musicBrainz": "https://musicbrainz.org/artist/188711ed-c99b-439c-844a-ca831f63a727",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/ec84ab32-eb41-3d91-a099-7a01c72f21d2",
+          "albumTwo": "https://musicbrainz.org/release-group/c748987e-7cb5-3880-b246-d20af2b136f3"
+        }
       }
     },
     {
@@ -5662,11 +5806,14 @@
       "hometown": "Houston",
       "country": "United States",
       "gender": "M",
-      "albumOne": "This Is Why Mike Jones Is Running the Game!",
+      "albumOne": "The Voice",
       "albumTwo": "1st Round Draft Picks",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/08962fc5-ed17-453b-9c68-ff7922eb4957"
+        "musicBrainz": "https://musicbrainz.org/artist/08962fc5-ed17-453b-9c68-ff7922eb4957",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/f449af58-67f3-4b04-a55c-dcc217fb973e"
+        }
       }
     },
     {
@@ -5800,7 +5947,8 @@
       "id": "mykki-blanco",
       "name": "Mykki Blanco",
       "aliases": [
-        "Michael David Quattlebaum Jr."
+        "Michael David Quattlebaum Jr.",
+        "Mykki"
       ],
       "birthDate": "1986-04-02",
       "ageStatus": "40 (Alive)",
@@ -5808,10 +5956,13 @@
       "country": "United States",
       "gender": "O",
       "albumOne": "Cosmic Angel: The Illuminati Prince/ss",
-      "albumTwo": "Mykki Blanco presents: Gay Dog Food",
+      "albumTwo": "Broken Hearts & Beauty Sleep",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/d4fa908d-9513-4d20-a04e-e605282e7a64"
+        "musicBrainz": "https://musicbrainz.org/artist/d4fa908d-9513-4d20-a04e-e605282e7a64",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/a79b071a-3248-4723-8122-7fff6a84c9e3"
+        }
       }
     },
     {
@@ -5828,11 +5979,15 @@
       "hometown": "New Orleans",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Mystikal",
-      "albumTwo": "Mind of Mystikal",
+      "albumOne": "Unpredictable",
+      "albumTwo": "Let’s Get Ready",
       "firstLetter": "M",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/1cfe52d7-181a-4b3a-8041-d8bf9ccef57b"
+        "musicBrainz": "https://musicbrainz.org/artist/1cfe52d7-181a-4b3a-8041-d8bf9ccef57b",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/dddf582b-8046-3e31-b68d-37f4de772a0d",
+          "albumTwo": "https://musicbrainz.org/release-group/2fb3b471-69ab-3506-ae3e-124066582f7a"
+        }
       }
     },
     {
@@ -5850,11 +6005,14 @@
       "hometown": "LeFrak City",
       "country": "United States",
       "gender": "M",
-      "albumOne": "N.O.R.E.",
+      "albumOne": "God’s Favorite",
       "albumTwo": "Melvin Flynt - Da Hustler",
       "firstLetter": "N",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/812d3015-2f4c-4fa7-bd7d-30ec4beb2c82"
+        "musicBrainz": "https://musicbrainz.org/artist/812d3015-2f4c-4fa7-bd7d-30ec4beb2c82",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/356360f5-3d7b-32b5-bdf7-83fbf4f16676"
+        }
       }
     },
     {
@@ -5935,10 +6093,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "I Need Drugs",
-      "albumTwo": "Necro Instrumentals, Volume 1",
+      "albumTwo": "Gory Days",
       "firstLetter": "N",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/b57db116-5947-462e-aa7b-3dd1ecb5be45"
+        "musicBrainz": "https://musicbrainz.org/artist/b57db116-5947-462e-aa7b-3dd1ecb5be45",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/111cc45a-91fa-31b3-b180-15a4761c549c"
+        }
       }
     },
     {
@@ -5956,10 +6117,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Country Grammar",
-      "albumTwo": "Nellyville",
+      "albumTwo": "Sweat",
       "firstLetter": "N",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/811900b2-68fc-4d41-8bad-69b7a1f4d628"
+        "musicBrainz": "https://musicbrainz.org/artist/811900b2-68fc-4d41-8bad-69b7a1f4d628",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/07ea0219-6864-3657-adf0-eda8eddd8b8a"
+        }
       }
     },
     {
@@ -6079,11 +6243,14 @@
       "hometown": "Norfolk",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Nottz Presents DMP - The Mixtape",
+      "albumOne": "Gods in the Spirit, Titans in the Flesh",
       "albumTwo": "You Need This Music",
       "firstLetter": "N",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/6bb7c5ce-be26-4936-bb81-00cb2f223105"
+        "musicBrainz": "https://musicbrainz.org/artist/6bb7c5ce-be26-4936-bb81-00cb2f223105",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/9b95c7b4-76b5-4e13-967e-d2afdaf276ac"
+        }
       }
     },
     {
@@ -6231,10 +6398,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "A Threat & a Promise",
-      "albumTwo": "Papoose Season",
+      "albumTwo": "The Nacirema Dream",
       "firstLetter": "P",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/0328f44f-8519-4e3b-b6c5-019591751e4e"
+        "musicBrainz": "https://musicbrainz.org/artist/0328f44f-8519-4e3b-b6c5-019591751e4e",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/2be20eed-a0da-4339-8a31-ef20d1828b59"
+        }
       }
     },
     {
@@ -6622,10 +6792,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Amplified",
-      "albumTwo": "Kamaal the Abstract",
+      "albumTwo": "The Renaissance",
       "firstLetter": "Q",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/b3c94036-6166-41d2-91a2-dc3a0b5fa188"
+        "musicBrainz": "https://musicbrainz.org/artist/b3c94036-6166-41d2-91a2-dc3a0b5fa188",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/d2d0a1a8-aafc-3f92-93b9-a327f23590cb"
+        }
       }
     },
     {
@@ -6659,10 +6832,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Quality Control Music",
-      "albumTwo": "QUAVO HUNCHO",
+      "albumTwo": "Rocket Power",
       "firstLetter": "Q",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/6143403a-df6c-429e-8ee6-ef869896b0da"
+        "musicBrainz": "https://musicbrainz.org/artist/6143403a-df6c-429e-8ee6-ef869896b0da",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/b130fc18-235c-4f54-8a46-86e66ffd599c"
+        }
       }
     },
     {
@@ -6724,11 +6900,15 @@
       "hometown": "Wyandanch",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Unreleased Rakim Studio Set",
-      "albumTwo": "The 18th Letter",
+      "albumOne": "The Master",
+      "albumTwo": "The Seventh Seal",
       "firstLetter": "R",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/2792b097-0b1d-4c50-97f6-f7f097f86438"
+        "musicBrainz": "https://musicbrainz.org/artist/2792b097-0b1d-4c50-97f6-f7f097f86438",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b7ccbc4f-774e-3224-9862-3eac986e2512",
+          "albumTwo": "https://musicbrainz.org/release-group/77ca284f-b0f2-42da-855a-620393eb8092"
+        }
       }
     },
     {
@@ -6860,11 +7040,14 @@
       "hometown": "Castle Hill",
       "country": "United States",
       "gender": "F",
-      "albumOne": "There’s Something About Remy: Based on a True Story",
+      "albumOne": "Shesus Khryst",
       "albumTwo": "Plata o plomo",
       "firstLetter": "R",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/1e882508-f664-4abb-919a-8e266f2fad63"
+        "musicBrainz": "https://musicbrainz.org/artist/1e882508-f664-4abb-919a-8e266f2fad63",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/e64a81fc-a728-4428-acbf-92c6b6c47a3b"
+        }
       }
     },
     {
@@ -6937,11 +7120,14 @@
       "hometown": "New Orleans",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Lil’ Romeo",
+      "albumOne": "Hidden Treasure",
       "albumTwo": "Gametime",
       "firstLetter": "R",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/cc0a8d92-dde4-4041-b420-31780c9fe781"
+        "musicBrainz": "https://musicbrainz.org/artist/cc0a8d92-dde4-4041-b420-31780c9fe781",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/355df742-0a07-4000-a320-17fe320af591"
+        }
       }
     },
     {
@@ -6984,11 +7170,14 @@
       "hometown": "Brownsville",
       "country": "United States",
       "gender": "M",
-      "albumOne": "RZA as Bobby Digital in Stereo",
+      "albumOne": "Birth of a Prince",
       "albumTwo": "Digital Bullet",
       "firstLetter": "R",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/29c28ac3-27c5-4822-8eb6-0af89a3a7240"
+        "musicBrainz": "https://musicbrainz.org/artist/29c28ac3-27c5-4822-8eb6-0af89a3a7240",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/9899290e-7363-372a-b95d-d72d8c4697a4"
+        }
       }
     },
     {
@@ -7022,11 +7211,14 @@
       "hometown": "Houston",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Mr. Scarface Is Back",
+      "albumOne": "The Diary",
       "albumTwo": "The World Is Yours",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/7d0b6027-8132-4417-8c4c-ef0bbf9161c0"
+        "musicBrainz": "https://musicbrainz.org/artist/7d0b6027-8132-4417-8c4c-ef0bbf9161c0",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/bc009ee0-05bc-37f9-8b07-ce93e09131eb"
+        }
       }
     },
     {
@@ -7067,11 +7259,14 @@
       "hometown": "Philadelphia",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Schoolly D",
+      "albumOne": "Smoke Some Kill",
       "albumTwo": "Saturday Night! The Album",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/323f2398-094d-45a0-8b87-ed84938e9eb3"
+        "musicBrainz": "https://musicbrainz.org/artist/323f2398-094d-45a0-8b87-ed84938e9eb3",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/a78bcdf7-b88b-3882-9d37-5ff73a212de3"
+        }
       }
     },
     {
@@ -7238,10 +7433,13 @@
       "country": "United States",
       "gender": "F",
       "albumOne": "You Been Played",
-      "albumTwo": "Smooth",
+      "albumTwo": "Reality",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/9c430c97-0a04-4d2c-8ae5-78f781879940"
+        "musicBrainz": "https://musicbrainz.org/artist/9c430c97-0a04-4d2c-8ae5-78f781879940",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/a7113838-6c2a-36cb-bf9c-35f9cc839b5a"
+        }
       }
     },
     {
@@ -7349,11 +7547,15 @@
       "hometown": "Chicago",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Souljaboytellem.com",
-      "albumTwo": "iSouljaBoyTellEm",
+      "albumOne": "The DeAndre Way",
+      "albumTwo": "Loyalty",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/29eead4d-3793-4625-8727-c03edbb38b8b"
+        "musicBrainz": "https://musicbrainz.org/artist/29eead4d-3793-4625-8727-c03edbb38b8b",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/15b46fca-ab21-4ca7-b796-e9e6cea9c510",
+          "albumTwo": "https://musicbrainz.org/release-group/5b52a109-37e4-4b94-8150-727d0e8dcc09"
+        }
       }
     },
     {
@@ -7385,11 +7587,14 @@
       "hometown": "Milwaukee",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Speech",
+      "albumOne": "Spiritual People",
       "albumTwo": "Hoopla",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/dee9c728-837e-4f31-a526-e999f61b6eae"
+        "musicBrainz": "https://musicbrainz.org/artist/dee9c728-837e-4f31-a526-e999f61b6eae",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/42b93ae2-3b57-30ce-8bbf-efa8a712ecf7"
+        }
       }
     },
     {
@@ -7441,10 +7646,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "To This Union a Sun Was Born",
-      "albumTwo": "Substantial Evidence",
+      "albumTwo": "Sacrifice",
       "firstLetter": "S",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/38cdd71c-344b-4c54-bac2-19709da7140d"
+        "musicBrainz": "https://musicbrainz.org/artist/38cdd71c-344b-4c54-bac2-19709da7140d",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/dc9a4789-4448-3e8a-838b-aeb726379d28"
+        }
       }
     },
     {
@@ -7630,11 +7838,14 @@
       "hometown": "Los Angeles",
       "country": "United States",
       "gender": "M",
-      "albumOne": "The World Is Based on G.A.M.E.",
+      "albumOne": "The Documentary",
       "albumTwo": "Untold Story",
       "firstLetter": "T",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/07cc14fb-4784-4a25-804b-2686ed5ef52c"
+        "musicBrainz": "https://musicbrainz.org/artist/07cc14fb-4784-4a25-804b-2686ed5ef52c",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/59e16e18-b446-3ccf-a67f-ca447f610ed9"
+        }
       }
     },
     {
@@ -7667,11 +7878,15 @@
       "hometown": "Pittsburg",
       "country": "United States",
       "gender": "M",
-      "albumOne": "The Jacka of the Mob Figaz",
-      "albumTwo": "The Jack Artist",
+      "albumOne": "Tear Gas",
+      "albumTwo": "Murder Weapon",
       "firstLetter": "T",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/71ae037a-d95f-4bd7-aa9a-dd557a7d84ae"
+        "musicBrainz": "https://musicbrainz.org/artist/71ae037a-d95f-4bd7-aa9a-dd557a7d84ae",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b5cd6af2-d1ea-4ade-99ce-4fb4b6abb659",
+          "albumTwo": "https://musicbrainz.org/release-group/6b338609-8a99-44dd-be07-b6e3166ac96d"
+        }
       }
     },
     {
@@ -7778,18 +7993,23 @@
         "Tonc Loc",
         "Y2K Tone Loc",
         "Anthony Terrell Smith",
-        "Tone-Loc"
+        "Tone-Loc",
+        "Loc"
       ],
       "birthDate": "1966-03-03",
       "ageStatus": "60 (Alive)",
       "hometown": "Los Angeles",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Lōc‐ed After Dark",
-      "albumTwo": "Cool Hand Lōc",
+      "albumOne": "I Got It Goin’ On",
+      "albumTwo": "Wild Thing - The Very Best (Re-Recorded / Remastered Versions)",
       "firstLetter": "T",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/16da4997-78e1-4837-85f6-9247d10cde1f"
+        "musicBrainz": "https://musicbrainz.org/artist/16da4997-78e1-4837-85f6-9247d10cde1f",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/3073bac5-68c7-4e8b-ad21-5114bdda417e",
+          "albumTwo": "https://musicbrainz.org/release-group/b0406b26-1da3-4cad-be2d-7248d0421c97"
+        }
       }
     },
     {
@@ -7891,11 +8111,15 @@
       "hometown": "Queensbridge",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Intelligent Hoodlum",
-      "albumTwo": "Tragedy: Saga of a Hoodlum",
+      "albumOne": "Against All Odds",
+      "albumTwo": "Still Reportin...",
       "firstLetter": "T",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/d02c7851-a554-4318-bf95-f049a51b2fc8"
+        "musicBrainz": "https://musicbrainz.org/artist/d02c7851-a554-4318-bf95-f049a51b2fc8",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/2f548c8c-583b-368f-a9f2-f3ffbeec7035",
+          "albumTwo": "https://musicbrainz.org/release-group/49487916-16f3-312f-9708-5585da0be7af"
+        }
       }
     },
     {
@@ -8010,11 +8234,14 @@
       "hometown": "Los Angeles",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Ty $",
+      "albumOne": "Beach House 3",
       "albumTwo": "Free TC",
       "firstLetter": "T",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/7bd66c18-cb33-49aa-9279-140acedbdb49"
+        "musicBrainz": "https://musicbrainz.org/artist/7bd66c18-cb33-49aa-9279-140acedbdb49",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/11902107-ad75-4323-8c7c-f33bf2da4265"
+        }
       }
     },
     {
@@ -8407,11 +8634,14 @@
       "hometown": "Plantation",
       "country": "United States",
       "gender": "M",
-      "albumOne": "/r/XXXTENTACION PRESENTS: XXXTRA RARE TRACKS, VOLUME ONE",
+      "albumOne": "?",
       "albumTwo": "17",
       "firstLetter": "X",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/61af87f4-16ee-4431-8504-cc06187079fb"
+        "musicBrainz": "https://musicbrainz.org/artist/61af87f4-16ee-4431-8504-cc06187079fb",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/311ae629-ee9e-443e-9c38-d7a5c97679d5"
+        }
       }
     },
     {
@@ -8617,11 +8847,14 @@
       "hometown": "Sierra Madre",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Noble Justice",
+      "albumOne": "Son of God",
       "albumTwo": "Mobb Tales : The Story Continues...",
       "firstLetter": "Y",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/44d58b8a-def1-494b-8daf-aa2def5476b6"
+        "musicBrainz": "https://musicbrainz.org/artist/44d58b8a-def1-494b-8daf-aa2def5476b6",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/789b051d-c76e-499e-afd0-f6cc022227ee"
+        }
       }
     },
     {
@@ -8664,10 +8897,13 @@
       "country": "United States",
       "gender": "M",
       "albumOne": "Barter 6",
-      "albumTwo": "Thug-A-Nomics",
+      "albumTwo": "So Much Fun",
       "firstLetter": "Y",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/800760de-bdf8-43a2-8fe0-44a2401a5515"
+        "musicBrainz": "https://musicbrainz.org/artist/800760de-bdf8-43a2-8fe0-44a2401a5515",
+        "albumClues": {
+          "albumTwo": "https://musicbrainz.org/release-group/24942280-2605-4e49-a507-67136d22a0b4"
+        }
       }
     },
     {
@@ -8700,11 +8936,14 @@
       "hometown": "Ukraine",
       "country": "United States",
       "gender": "M",
-      "albumOne": "Your Old Droog",
+      "albumOne": "It Wasn't Even Close",
       "albumTwo": "Packs",
       "firstLetter": "Y",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/artist/ef39d47a-d530-4fa2-8f74-0c73ce195f02"
+        "musicBrainz": "https://musicbrainz.org/artist/ef39d47a-d530-4fa2-8f74-0c73ce195f02",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/b3fc8390-c040-482c-b1b4-7a5b2711784c"
+        }
       }
     },
     {
@@ -8773,11 +9012,14 @@
       "hometown": "Ladbroke Grove",
       "country": "United Kingdom",
       "gender": "M",
-      "albumOne": "AJ Tracey",
+      "albumOne": "Secure the Bag!",
       "albumTwo": "Flu Game",
       "firstLetter": "A",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/search?query=AJ%20Tracey&type=artist&method=indexed"
+        "musicBrainz": "https://musicbrainz.org/search?query=AJ%20Tracey&type=artist&method=indexed",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/d5a0fb0d-59d2-4f03-b8d8-6e8631a71c4a"
+        }
       }
     },
     {
@@ -9329,11 +9571,14 @@
       "hometown": "East Orange",
       "country": "United States",
       "gender": "F",
-      "albumOne": "The Miseducation of Lauryn Hill",
+      "albumOne": "Everything Is Everything",
       "albumTwo": "MTV Unplugged No. 2.0",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/search?query=Lauryn%20Hill&type=artist&method=indexed"
+        "musicBrainz": "https://musicbrainz.org/search?query=Lauryn%20Hill&type=artist&method=indexed",
+        "albumClues": {
+          "albumOne": "https://music.apple.com/us/album/everything-is-everything-ep/400078743"
+        }
       }
     },
     {
@@ -9360,18 +9605,22 @@
       "name": "Lil Tecca",
       "enabled": true,
       "aliases": [
-        "Tyler-Justin Anthony Sharpe"
+        "Tyler-Justin Anthony Sharpe",
+        "Tecca"
       ],
       "birthDate": "2002-08-26",
       "ageStatus": "23 (Alive)",
       "hometown": "Queens",
       "country": "United States",
       "gender": "M",
-      "albumOne": "We Love You Tecca",
+      "albumOne": "PLAN A",
       "albumTwo": "Virgo World",
       "firstLetter": "L",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/search?query=Lil%20Tecca&type=artist&method=indexed"
+        "musicBrainz": "https://musicbrainz.org/search?query=Lil%20Tecca&type=artist&method=indexed",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/176bad9c-e6c7-478c-9bc9-3b4e5da46160"
+        }
       }
     },
     {
@@ -9463,11 +9712,14 @@
       "hometown": "Toronto",
       "country": "Canada",
       "gender": "M",
-      "albumOne": "NAV",
+      "albumOne": "RECKLESS",
       "albumTwo": "Bad Habits",
       "firstLetter": "N",
       "sources": {
-        "musicBrainz": "https://musicbrainz.org/search?query=NAV&type=artist&method=indexed"
+        "musicBrainz": "https://musicbrainz.org/search?query=NAV&type=artist&method=indexed",
+        "albumClues": {
+          "albumOne": "https://musicbrainz.org/release-group/a300016d-9d4e-4608-a157-db5fe920829c"
+        }
       }
     },
     {

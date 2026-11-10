@@ -22,6 +22,10 @@ Open [`/admin.html`](admin.html) for the roster dashboard. It includes roster he
 
 The “Make today” button for playable rappers sets today's answer. The selected override and shifted schedule are saved in browser storage, so they apply to you and friends using that same browser profile.
 
+## Release Clues
+
+Release clues use albums, with EPs or mixtapes when needed to avoid revealing the answer. Titles must not contain the rapper's name or an accepted alias, including spelling and punctuation variants. Data refreshes preserve curated safe clues and aliases. `npm run build` validates every roster entry, including disabled rappers; `npm test` checks clue filtering and replacement selection.
+
 ## Deploy To Vercel
 
 1. Push this folder to a GitHub repository.

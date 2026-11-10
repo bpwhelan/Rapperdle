@@ -12,8 +12,8 @@ const includeStateWithHometown = false;
 const baseClueFields = [
   ["Age / Status / Gender", "ageStatus", true],
   ["Hometown", "hometown"],
-  ["Album", "albumOne"],
-  ["Album", "albumTwo"],
+  ["Release", "albumOne"],
+  ["Release", "albumTwo"],
   ["First Letter", "firstLetter"],
   ["Signature Clue", "signature", false],
 ];
